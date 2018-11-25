@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="description" content="Organize anything, together. Trello is a collaboration tool that organizes your projects into boards. In one glance, know what's being worked on, who's working on what, and where something is in a process.">
+  <meta name="viewport" content="maximum-scale=1.0,width=device-width,initial-scale=1.0,user-scalable=0">
+  <meta name="apple-itunes-app" content="app-id=461504587, app-argument=https://trello.com/b/KzwZ1qQn/hackaton-unimed">
+  <meta name="slack-app-id" content="A074YH40Z">
+  <meta name="robots" content="noarchive">
+  <meta name="referrer" content="origin-when-cross-origin">
+  <title>Background - Avaliação on Hackaton Unimed | Trello</title>
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/cbgapi.js" async=""></script><script async="" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/gtm.js"></script><script async="" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/analytics.js"></script><script>var _failed=function(a){a=a.src||a.href;var b=function(a){if(a=/^https?:\/\/[^\/]+/.exec(a))return a[0]},b=b(a)||b(location.href)||"unknown";ga('send','event','Load Failure',b,a)};</script>
+  <script>
+    !function(e){var t={};function r(n){if(t[n])return t[n].exports;var a=t[n]={i:n,l:!1,exports:{}};return e[n].call(a.exports,a,a.exports,r),a.l=!0,a.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="https://a.trellocdn.com/prgb/dist/",r(r.s="hXt6")}({hXt6:function(e,t,r){"use strict";function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function a(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}Object.defineProperty(t,"__esModule",{value:!0}),r.d(t,"PerfKeys",function(){return o});var o={NAVIGATION:"startup:navigation",NAVIGATION_TLS:"startup:navigation-tls",NAVIGATION_TTFB:"startup:navigation-ttfb",HTML:"startup:html",TIME_TO_INTERACTIVE:"startup:time-to-interactive",LOAD_TO_INTERACTIVE:"startup:page-load-to-interactive",APP:"startup:app.js",APP_DOWNLOAD:"download:app.js",LTP:"startup:ltp.js",LTP_DOWNLOAD:"download:ltp.js",QL_MEMBER_HEADER:"quickload:memberHeader",QL_MEMBER_BOARDS:"quickload:memberBoards",QL_MEMBER_QUICK_BOARDS:"quickload:memberQuickBoards",QL_SEARCH:"quickload:quickBoardSearch",QL_BOARD_MIN:"quickload:currentBoardMinimal",QL_BOARD_SECONDARY:"quickload:currentBoardSecondary",QL_BOARD_PLUGINS:"quickload:currentBoardPluginData",QL_CARD:"quickload:card",QL_ORGS:"quickload:organizationBoardsPage",BOOTSTRAP_HOME_VIEW:"bootstrap:member-home-view",BOOTSTRAP_SUPERHOME_VIEW:"bootstrap:member-super-home-view",BOOTSTRAP_CARD_VIEW:"bootstrap:card-view",BOOTSTRAP_BOARD_VIEW:"bootstrap:boards-view"},i="performance"in window,c=function(e){},s=Object.keys(o).map(function(e){return o[e]}),u="requestIdleCallback"in window?window.requestIdleCallback:setTimeout,p=function(){function e(){var t=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),a(this,"startupReported",!1),a(this,"Keys",o),a(this,"startMeasurement",i?function(e){if(-1!==s.indexOf(e))try{window.performance.mark("".concat(e,"-start"))}catch(e){}}:c),a(this,"stopMeasurement",i?function(e){if(-1!==s.indexOf(e))try{window.performance.mark("".concat(e,"-end")),window.performance.measure(e,"".concat(e,"-start"),"".concat(e,"-end"));var r=window.performance.getEntriesByName(e)[0];t.reportMetrics([{name:e,totalTime:r.duration}])}catch(e){}}:c)}var t,r,p;return t=e,(r=[{key:"reportMetrics",value:function(e){u(function(){e.forEach(function(e){e.name,e.totalTime})})}},{key:"reportStartupMetrics",value:function(){if(!this.startupReported){try{performance.mark("done"),window.performance.measure(o.LOAD_TO_INTERACTIVE,"startup:html-start","done");var e=window.performance.getEntriesByType("navigation")[0],t=window.performance.getEntriesByType("resource").filter(function(e){return"script"===e.initiatorType&&e.name.includes("ltp")})[0],r=window.performance.getEntriesByType("resource").filter(function(e){return"script"===e.initiatorType&&e.name.includes("app")})[0],n=window.performance.getEntriesByName(o.LOAD_TO_INTERACTIVE)[0],a=window.performance.getEntriesByName("done")[0];this.reportMetrics([{name:o.NAVIGATION,totalTime:e.responseEnd-e.fetchStart},{name:o.NAVIGATION_TLS,totalTime:e.secureConnectionStart>0?e.connectEnd-e.secureConnectionStart:0},{name:o.NAVIGATION_TTFB,totalTime:e.responseStart-e.requestStart},{name:o.TIME_TO_INTERACTIVE,totalTime:n.duration},{name:o.LOAD_TO_INTERACTIVE,totalTime:a.startTime-e.startTime},{name:o.LTP_DOWNLOAD,totalTime:t.responseEnd-t.responseStart},{name:o.APP_DOWNLOAD,totalTime:r.responseEnd-r.responseStart}])}catch(e){}this.startupReported=!0}}}])&&n(t.prototype,r),p&&n(t,p),e}();window.TrelloPerf=window.TrelloPerf?window.TrelloPerf:new p,t.default=window.TrelloPerf}});
+//# sourceMappingURL=perf.c64cf66e1fbf869f4587.js.map
+    TrelloPerf.startMeasurement(TrelloPerf.Keys.HTML);
+  </script>
+  <!-- Google Analytics, load failure tracking, and data load kickoff -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    var page = location.pathname;
+    if(page === "/") page = "/boards";
+    ga('create', 'UA-53826304-2', {
+      cookieDomain: 'trello.com',
+      sampleRate: 1
+    });
+    var versionComponents = 'build-2339'.split('-');
+    ga('set', 'dimension1', versionComponents[0]);
+    ga('set', 'dimension2', versionComponents[1]);
+    ga('send', 'pageview', page);
+    
+    (function(i,c,e){if(!i[e]){i.GlobalSnowplowNamespace=i.GlobalSnowplowNamespace||[];
+    i.GlobalSnowplowNamespace.push(e);i[e]=function(){
+      var r=arguments;
+      var defer = i['requestIdleCallback'] ? i.requestIdleCallback : i.setTimeout;
+      defer(function(){
+        (i[e].q=i[e].q||[]).push(r)
+      });
+    };i[e].q=i[e].q||[];}}(window,document,"sp"));
+  </script>
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/snowplow.js" async="" crossorigin="anonymous" onerror="_failed(this)"></script>
+  
+  <script type="text/javascript">
+  window.dataLayer=window.dataLayer||[];
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=chlg06CfblVj204fihGEqA&gtm_preview=env-8&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PJ8M5SK');
+  </script>
+  
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/quickload.js" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script type="text/javascript">
+    window.clientVersion = 'build-2339';
+    window.slackTrelloDomain = 'https://slack-chat.trello.services';
+    window.slackDomain = 'https://slack.com/oauth/authorize';
+    window.trelloForWebsites = 'https://p.trellocdn.com';
+    window.customFieldsId = '56d5e249a98895a9797bebb9';
+    window.firstPartyPluginsOrg = '5a999cd36066c584c097f193';
+
+    window.attachmentsDomain = "https://trello-attachments.s3.amazonaws.com";
+    window.avatarDomain = "https://trello-avatars.s3.amazonaws.com";
+    window.backgroundDomain = "https://trello-backgrounds.s3.amazonaws.com";
+    window.logoDomain = "https://trello-logos.s3.amazonaws.com";
+
+    window.oneDriveClientId = 'f7936f71-2186-4c33-8553-134e287aefdf';
+    window.googleDriveClientId = '28300235456-b801aqbc1i8luet9arr7sgll09t6eep9.apps.googleusercontent.com';
+    window.dropboxClientAppKey = '36ipz29apw2svq8';
+    window.boxClientId = 'zclwcvudmddhz0cscz3w6awtcfs8bne3';
+    window.braintreeClientToken = 'production_xv5hxtpx_p8hfn7hqkwk46fwb';
+
+    window.snowplowCloudfrontServer = 'c.trello.com';
+    window.analyticsWebClientEnv = 'PROD';
+    window.launchdarklyKey = '58f55132f1e0bb0cb6b2829e';
+    window.appcuesAccountId = '26999';
+  </script>
+  <script>
+    window.locale = 'en-US';
+  </script>
+
+  
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/manifest.js" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script>TrelloPerf.startMeasurement(TrelloPerf.Keys.LTP);</script>
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/ltp.js" crossorigin="anonymous" onerror="_failed(this)"></script><style data-styled-components=""></style>
+  <script>TrelloPerf.stopMeasurement(TrelloPerf.Keys.LTP);</script>
+  
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/locale.js" crossorigin="anonymous" onerror="_failed(this)"></script>
+  <script>TrelloPerf.startMeasurement(TrelloPerf.Keys.APP);</script>
+  <script src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/app.js" crossorigin="anonymous" onerror="_failed(this)"></script><style type="text/css">/*
+ * Exporting these color variables here, and importing them in
+ * colors.tsx in order to provide autocomplete and typings
+ */
+.power-up__flexRow__2niHI {
+  display: flex;
+  flex-direction: row;
+}
+.power-up__flexColumn__3SieL {
+  display: flex;
+  flex-direction: column;
+}
+.power-up__relative__306mz {
+  position: relative;
+}
+.power-up__flexRowSpaceBetween__2rNut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.power-up__flexColumnCenter__DmJIX {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.power-up__nameContainer__1N21s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.power-up__name__2ogDy {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  margin-left: 8px;
+}
+.power-up__name__2ogDy.power-up__loadingSkeleton__3YicH {
+  height: 18px;
+  margin-bottom: 4px;
+  min-width: 100px;
+}
+.power-up__subtitle__3CyyJ {
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  line-height: normal;
+  margin-left: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+}
+.power-up__icon__2u-0p {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+}
+.power-up__description__2693F {
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 18px;
+  height: 54px;
+  overflow: hidden;
+}
+.power-up__descriptionAtom__3MN0g {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  height: 100px;
+}
+.power-up__descriptionAtom__3MN0g:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.power-up__featuredAtomContainer__WkF3f {
+  background: white;
+  min-width: 304px;
+  max-height: 368px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.power-up__featuredAtom__3pHPd {
+  padding: 10px;
+  height: 100px;
+}
+.power-up__heroImage__2JRMH {
+  height: 240px;
+  width: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+@-webkit-keyframes power-up__loadingSkeletonAnimation__398Qv {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@keyframes power-up__loadingSkeletonAnimation__398Qv {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+.power-up__loadingSkeleton__3YicH {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: power-up__loadingSkeletonAnimation__398Qv;
+          animation-name: power-up__loadingSkeletonAnimation__398Qv;
+  background: linear-gradient(to right, #EBEEF0 8%, #DFE3E6 18%, #EBEEF0 33%);
+  background-size: 800px 104px;
+}
+.power-up__loadingSkeletonButton__3dQBX {
+  height: 24px;
+  min-width: 64px;
+  margin-top: 3px;
+  border-radius: 3px;
+}
+</style><style type="text/css">.feature-feedback-link__m-badge-toggle-default__3PkAr {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.feature-feedback-link__m-badge-toggle-off-idle__2sEmD {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.feature-feedback-link__m-badge-toggle-off-hover__37IEL {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.feature-feedback-link__m-badge-toggle-off-active__1uzJV {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.feature-feedback-link__m-badge-toggle-on-idle__2Q3bW {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.feature-feedback-link__m-badge-toggle-on-hover__2ZgPE {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.feature-feedback-link__m-badge-toggle-on-active__1jqOl {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.feature-feedback-link__m-button-no-style__22jQF {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.feature-feedback-link__m-button-no-style__22jQF,
+.feature-feedback-link__m-button-no-style__22jQF:hover,
+.feature-feedback-link__m-button-no-style__22jQF:active,
+.feature-feedback-link__m-button-no-style__22jQF:focus {
+  background: none;
+}
+.feature-feedback-link__feedbackContainer__DXykH {
+  background-color: #FAF3C0;
+  border-radius: 4px;
+  display: flex;
+  color: #17394D;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__feedbackLink__34Voi {
+  color: #17394D;
+}
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__feedbackLink__34Voi:hover {
+  color: #111;
+}
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__dismissButtonIcon__1wRFp {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__dismissButtonIcon__1wRFp,
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__dismissButtonIcon__1wRFp:hover,
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__dismissButtonIcon__1wRFp:active,
+.feature-feedback-link__feedbackContainer__DXykH .feature-feedback-link__dismissButtonIcon__1wRFp:focus {
+  background: none;
+}
+</style><style type="text/css">.section-header__m-badge-toggle-default__3X6fh {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.section-header__m-badge-toggle-off-idle__2RghK {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.section-header__m-badge-toggle-off-hover__132tJ {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.section-header__m-badge-toggle-off-active__12owY {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.section-header__m-badge-toggle-on-idle__3OrE9 {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.section-header__m-badge-toggle-on-hover__2z7-8 {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.section-header__m-badge-toggle-on-active__3RqQZ {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.section-header__m-button-no-style__3prYt {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.section-header__m-button-no-style__3prYt,
+.section-header__m-button-no-style__3prYt:hover,
+.section-header__m-button-no-style__3prYt:active,
+.section-header__m-button-no-style__3prYt:focus {
+  background: none;
+}
+.section-header__header__2Z6-2 {
+  align-items: baseline;
+  display: flex;
+  height: 32px;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  padding: 0 0 0 8px;
+}
+.section-header__noMargin__1knk4 {
+  margin: 0;
+}
+.section-header__text__1SpVs {
+  color: #6B808C;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 16px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 8px 0;
+}
+.section-header__icon__2h8hP {
+  flex: 0 0 auto;
+  margin-left: -8px;
+  position: relative;
+  text-align: center;
+  top: 1px;
+  width: 32px;
+}
+.section-header__button__1bPgl {
+  align-items: center;
+  background-color: #E2E4E6;
+  background-image: none !important;
+  border-radius: 16px;
+  box-shadow: 0 1px 0 0 #C4C9CC;
+  color: #333333;
+  display: flex;
+  font-size: 12px;
+  font-weight: normal;
+  height: 32px;
+  justify-content: center;
+  margin: 0 0 0 8px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+.section-header__button__1bPgl:focus {
+  background-color: #E2E4E6;
+}
+.section-header__button__1bPgl:hover {
+  background-color: #D6DADC;
+  color: #333333;
+}
+.section-header__button__1bPgl:active {
+  background-color: #C4C9CC;
+  box-shadow: 0 1px 0 0 #A5ACB0;
+}
+.section-header__buttonIcon__wDL1A {
+  color: #838C91;
+  margin-left: -6px;
+}
+.section-header__buttonIconSpan__1_a9F {
+  color: currentcolor !important;
+}
+.section-header__buttonText__3Ctjy {
+  margin: 0 4px;
+}
+.section-header__fixedButton__1OgPW {
+  display: flex;
+  height: 0;
+  justify-content: center;
+  left: 0;
+  opacity: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 408px;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+  transition: 200ms opacity, 200ms -webkit-transform;
+  transition: 200ms transform, 200ms opacity;
+  transition: 200ms transform, 200ms opacity, 200ms -webkit-transform;
+  width: 100%;
+  z-index: 1;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl {
+  background-color: #61BD4F;
+  box-shadow: 0 1px 0 0 #519839, 0 2px 2px 0 rgba(51, 51, 51, 0.3);
+  color: white;
+  margin: 0;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl:hover {
+  color: white;
+  background-color: #5AAC44;
+}
+.section-header__fixedButton__1OgPW .section-header__button__1bPgl:active {
+  background-color: #519839;
+  box-shadow: 0 1px 0 0 #49852E, 0 2px 2px 0 rgba(51, 51, 51, 0.3);
+}
+.section-header__fixedButton__1OgPW .section-header__buttonIcon__wDL1A {
+  color: white;
+}
+.section-header__slideEnter__2vk2N,
+.section-header__slideExitActive__1KuEZ {
+  opacity: 0;
+  -webkit-transform: translateY(-424px);
+          transform: translateY(-424px);
+}
+.section-header__slideEnterActive__3sU8Z {
+  opacity: 1;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+}
+</style><style type="text/css">.tab__m-badge-toggle-default__M0Ay0 {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.tab__m-badge-toggle-off-idle__33h51 {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tab__m-badge-toggle-off-hover__1eQZN {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tab__m-badge-toggle-off-active__3cEq- {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.tab__m-badge-toggle-on-idle__2Rzoq {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tab__m-badge-toggle-on-hover__1Fs1K {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tab__m-badge-toggle-on-active__1eTz2 {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.tab__m-button-no-style__MUSIE {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.tab__m-button-no-style__MUSIE,
+.tab__m-button-no-style__MUSIE:hover,
+.tab__m-button-no-style__MUSIE:active,
+.tab__m-button-no-style__MUSIE:focus {
+  background: none;
+}
+.tab__tabSection__1qSDc + .tab__tabSection__1qSDc {
+  margin-top: 8px;
+}
+.tab__tabList__3G31t:last-child {
+  margin-bottom: 12px;
+}
+.tab__tab__15G2j {
+  margin-bottom: 4px;
+}
+.tab__tabIcon__32Nvj {
+  display: block;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 32px;
+  color: #798D99;
+}
+.tab__tabLink__3C9rw:hover .tab__tabIcon__32Nvj,
+.tab__tabButton__37WIj:hover .tab__tabIcon__32Nvj {
+  color: #516B7A;
+}
+.tab__tabLink__3C9rw:active .tab__tabIcon__32Nvj,
+.tab__tabButton__37WIj:active .tab__tabIcon__32Nvj {
+  color: #516B7A;
+}
+.tab__tabIconSpan__jlnEo {
+  color: currentcolor !important;
+}
+.tab__tabLogo__vPHtR {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 8px;
+}
+.tab__tabText__212hs {
+  flex: 1 1 auto;
+}
+.tab__tabLink__3C9rw,
+.tab__tabButton__37WIj {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: flex;
+  font-weight: bold;
+  margin: 0;
+  min-height: 20px;
+  overflow: hidden;
+  padding: 6px 8px 6px 0;
+  text-decoration: none;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 85ms;
+  transition-timing-function: ease;
+}
+.tab__tabLink__3C9rw:hover,
+.tab__tabButton__37WIj:hover {
+  background-color: rgba(9, 45, 66, 0.13);
+}
+.tab__tabLink__3C9rw:active,
+.tab__tabButton__37WIj:active {
+  background-color: rgba(9, 45, 66, 0.25);
+}
+.tab__tabButton__37WIj {
+  cursor: pointer;
+  font-weight: normal;
+  text-align: left;
+  width: 100%;
+}
+.tab__tabButton__37WIj,
+.tab__tabButton__37WIj:hover,
+.tab__tabButton__37WIj:active,
+.tab__tabButton__37WIj:focus {
+  box-shadow: none;
+}
+.tab__quiet__ed4jD {
+  color: rgba(9, 45, 66, 0.66);
+  font-weight: 400;
+}
+.tab__quiet__ed4jD:hover {
+  color: rgba(9, 45, 66, 0.77);
+}
+.tab__quiet__ed4jD:active {
+  color: rgba(9, 45, 66, 0.77);
+}
+.tab__quiet__ed4jD:focus {
+  color: rgba(9, 45, 66, 0.66);
+}
+.tab__small__3c22X {
+  font-size: 12px;
+}
+.tab__tabListIndent__2EVi- {
+  margin-top: 4px;
+  padding-left: 28px;
+}
+ul li:first-of-type a.tab__tabListIndent__2EVi- {
+  margin-top: 8px;
+}
+ul li:last-of-type a.tab__tabListIndent__2EVi- {
+  margin-bottom: 16px;
+}
+.tab__selected__1gsiC.tab__tabLink__3C9rw,
+.tab__selected__1gsiC.tab__tabButton__37WIj {
+  background-color: #E4F0F6;
+  color: #026AA7;
+}
+.tab__selected__1gsiC.tab__tabLink__3C9rw .tab__tabIcon__32Nvj,
+.tab__selected__1gsiC.tab__tabButton__37WIj .tab__tabIcon__32Nvj {
+  color: #0079BF;
+}
+.tab__tabRightChild__29on4 {
+  margin-left: auto;
+}
+</style><style type="text/css">.navigation__externalLink__3B4mB .navigation__externalIcon__3QWSf {
+  width: 0;
+  height: 18px;
+  opacity: 0;
+  transition-duration: .15s;
+  transition-property: opacity, width, margin;
+}
+.navigation__externalLink__3B4mB:hover .navigation__externalIcon__3QWSf {
+  opacity: .75;
+  width: 18px;
+  margin-right: 6px;
+}
+</style><style type="text/css">.orientation-card__m-badge-toggle-default__3DPOf {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.orientation-card__m-badge-toggle-off-idle__iivBy {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.orientation-card__m-badge-toggle-off-hover__sYOxr {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.orientation-card__m-badge-toggle-off-active__86WLK {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.orientation-card__m-badge-toggle-on-idle__1BjyM {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.orientation-card__m-badge-toggle-on-hover__qBzt7 {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.orientation-card__m-badge-toggle-on-active__185FD {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.orientation-card__m-button-no-style__19i6Q {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.orientation-card__m-button-no-style__19i6Q,
+.orientation-card__m-button-no-style__19i6Q:hover,
+.orientation-card__m-button-no-style__19i6Q:active,
+.orientation-card__m-button-no-style__19i6Q:focus {
+  background: none;
+}
+.orientation-card__orientationCard__35K3Q {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(9, 45, 66, 0.25), 0 0 0 1px rgba(9, 45, 66, 0.08);
+  display: flex;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+.orientation-card__orientationCardBackgroundTop__2iWUQ {
+  flex-direction: column;
+}
+.orientation-card__orientationCardBackgroundTop__2iWUQ span {
+  text-align: center;
+}
+.orientation-card__background__3-Q7m {
+  background-color: #FBEDEB;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 4px 0 0 4px;
+  flex: 0 0 auto;
+  min-height: 130px;
+  width: 88px;
+}
+.orientation-card__backgroundTop__1gBW4 {
+  border-radius: 4px 4px 0 0;
+  min-height: 100px;
+  width: 100%;
+}
+.orientation-card__infoContainer__2lmIm {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 16px;
+  width: 100%;
+}
+.orientation-card__textCenter__3UvT9 {
+  text-align: center;
+}
+.orientation-card__title__1myxb {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.orientation-card__title__1myxb.orientation-card__textCenter__3UvT9 {
+  padding-bottom: 8px;
+}
+.orientation-card__text__21sdQ {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 10px 0;
+}
+.orientation-card__text__21sdQ.orientation-card__textCenter__3UvT9 {
+  padding-bottom: 6px;
+}
+.orientation-card__dismissButtonIcon__3FJfN {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: 400;
+  position: absolute;
+  margin-top: 8px;
+  right: 8px;
+}
+.orientation-card__dismissButtonIcon__3FJfN:hover {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(9, 45, 66, 0.13);
+}
+.orientation-card__dismissButtonIcon__3FJfN:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(9, 45, 66, 0.25);
+}
+.orientation-card__dismissButton__hx47H {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: 400;
+  cursor: pointer;
+  color: #6B808C;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 4px 0 0 0;
+  text-decoration: underline;
+}
+.orientation-card__dismissButton__hx47H:hover {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(9, 45, 66, 0.13);
+  color: #17394D;
+}
+.orientation-card__dismissButton__hx47H:active {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(9, 45, 66, 0.25);
+  color: #17394D;
+}
+.orientation-card__dismissButtonBackgroundTop__2zU0P {
+  margin-top: 12px;
+  text-align: center;
+}
+.orientation-card__backgroundName-new-user__3HwfR {
+  background-color: #F7F0FA;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/new-user.c95fada45e5b8a72f20d.svg);
+  height: 136px;
+}
+.orientation-card__backgroundName-no-content__p56Lt {
+  background-color: #FDF5EC;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/no-content.e25c676458c1f4cb280b.svg);
+  height: 108px;
+}
+.orientation-card__backgroundName-up-next__rWRoK {
+  background-color: #FDF5EC;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/up-next.6b180fd2d4526f7925c9.svg);
+}
+.orientation-card__backgroundName-highlight__2kUWD {
+  background-color: #FEF2F9;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/highlights.2bc06dddced721a031de.svg);
+}
+.orientation-card__backgroundName-feedback__2chuy {
+  background-color: #FEF2F9;
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/home/orientation/feedback.f60abbf7cb5745c0b532.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[type="text"].orientation-card__createBoardInput__3IVvF {
+  width: 100%;
+}
+.orientation-card__createBoardButton__1zcAX {
+  margin-top: 0;
+  width: 100%;
+}
+</style><style type="text/css">.snackbar__m-badge-toggle-default__3uMFy {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.snackbar__m-badge-toggle-off-idle__2FJWJ {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.snackbar__m-badge-toggle-off-hover__1k42_ {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.snackbar__m-badge-toggle-off-active__2uoXp {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.snackbar__m-badge-toggle-on-idle__1YmgM {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.snackbar__m-badge-toggle-on-hover__MHtPN {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.snackbar__m-badge-toggle-on-active__7rNnC {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.snackbar__m-button-no-style__G7sjj {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.snackbar__m-button-no-style__G7sjj,
+.snackbar__m-button-no-style__G7sjj:hover,
+.snackbar__m-button-no-style__G7sjj:active,
+.snackbar__m-button-no-style__G7sjj:focus {
+  background: none;
+}
+.snackbar__snackbarStackingContext__3FZRx {
+  position: relative;
+  z-index: 10;
+}
+.snackbar__snackbar__2BMKG {
+  align-items: center;
+  background-color: #333333;
+  border-radius: 4px;
+  bottom: 16px;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 14px;
+  height: 48px;
+  left: 16px;
+  opacity: 1;
+  padding: 8px;
+  position: fixed;
+  -webkit-transform-origin: 50% 80%;
+          transform-origin: 50% 80%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: 0.2s opacity, 0.2s -webkit-transform;
+  transition: 0.2s opacity, 0.2s transform;
+  transition: 0.2s opacity, 0.2s transform, 0.2s -webkit-transform;
+  width: 290px;
+}
+@media only screen and (max-width: 711px) {
+  .snackbar__snackbar__2BMKG {
+    left: calc(50% - 216px);
+    width: 432px;
+  }
+}
+@media only screen and (max-width: 464px) {
+  .snackbar__snackbar__2BMKG {
+    left: 16px;
+    right: 16px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1092px) {
+  .snackbar__snackbar__2BMKG {
+    left: calc(50% - 216px);
+    margin-left: -14px;
+    width: 432px;
+  }
+}
+.snackbar__pinnedBoardsMenu__Yd-aj {
+  left: 16px;
+  margin-left: 0;
+  right: auto;
+  width: 290px;
+}
+@media only screen and (min-width: 1372px) {
+  .snackbar__pinnedBoardsMenu__Yd-aj {
+    left: calc(50% - 216px);
+    margin-left: 126px;
+    width: 432px;
+  }
+}
+.snackbar__fadeEnter__29r_- {
+  opacity: 0;
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+  z-index: 2;
+}
+.snackbar__fadeEnterActive__3A4au {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 2;
+}
+.snackbar__fadeExit__1OR8k {
+  opacity: 0;
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+  z-index: 1;
+}
+.snackbar__fadeExitActive__2CtlR {
+  opacity: 0;
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+  z-index: 1;
+}
+.snackbar__snackbar__2BMKG:not(:first-child).snackbar__fadeEnter__29r_-,
+.snackbar__snackbar__2BMKG:not(:last-child).snackbar__fadeEnter__29r_-,
+.snackbar__snackbar__2BMKG:not(:first-child).snackbar__fadeEnterActive__3A4au,
+.snackbar__snackbar__2BMKG:not(:last-child).snackbar__fadeEnterActive__3A4au {
+  transition: 0.3s opacity ease, 0.3s -webkit-transform cubic-bezier(0.8, 0, 0.75, 0.95);
+  transition: 0.3s transform cubic-bezier(0.8, 0, 0.75, 0.95), 0.3s opacity ease;
+  transition: 0.3s transform cubic-bezier(0.8, 0, 0.75, 0.95), 0.3s opacity ease, 0.3s -webkit-transform cubic-bezier(0.8, 0, 0.75, 0.95);
+}
+.snackbar__snackbar__2BMKG:not(:first-child).snackbar__fadeExit__1OR8k,
+.snackbar__snackbar__2BMKG:not(:last-child).snackbar__fadeExit__1OR8k,
+.snackbar__snackbar__2BMKG:not(:first-child).snackbar__fadeExitActive__2CtlR,
+.snackbar__snackbar__2BMKG:not(:last-child).snackbar__fadeExitActive__2CtlR {
+  transition: 0.3s opacity cubic-bezier(0.8, 0, 0.75, 0.95), 0.3s -webkit-transform ease;
+  transition: 0.3s transform ease, 0.3s opacity cubic-bezier(0.8, 0, 0.75, 0.95);
+  transition: 0.3s transform ease, 0.3s opacity cubic-bezier(0.8, 0, 0.75, 0.95), 0.3s -webkit-transform ease;
+}
+.snackbar__message__rllAe {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #EDEFF0;
+  flex: 1 1 auto;
+  margin: 0 0 0 8px;
+}
+.snackbar__message__rllAe a:link,
+.snackbar__message__rllAe a:visited {
+  color: #B6BBBF;
+}
+.snackbar__message__rllAe a:hover {
+  color: #CDD2D4;
+}
+.snackbar__message__rllAe a:active {
+  color: #D6DADC;
+}
+.snackbar__button__1MTDS {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+.snackbar__button__1MTDS:hover {
+  background: #222222;
+}
+.snackbar__button__1MTDS:active {
+  background: #000000;
+}
+.snackbar__button__1MTDS:focus {
+  background-image: none;
+}
+.snackbar__actionButton__1srmV {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  color: #5BA4CF;
+  font-weight: bold;
+  margin: 0 0 0 8px;
+  padding: 0 8px;
+}
+.snackbar__actionButton__1srmV:hover {
+  background: #222222;
+}
+.snackbar__actionButton__1srmV:active {
+  background: #000000;
+}
+.snackbar__actionButton__1srmV:focus {
+  background-image: none;
+}
+.snackbar__actionButton__1srmV:hover {
+  color: #8BBDD9;
+}
+.snackbar__actionButton__1srmV:active {
+  color: #BCD9EA;
+}
+.snackbar__closeIcon__2X6__ {
+  color: #959DA1 !important;
+  font-size: 16px !important;
+  line-height: 26px !important;
+}
+.snackbar__closeButton__1jpTy {
+  background: none;
+  border-radius: 4px;
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 3px 0 1px;
+  padding: 0;
+  width: 26px;
+}
+.snackbar__closeButton__1jpTy:hover {
+  background: #222222;
+}
+.snackbar__closeButton__1jpTy:active {
+  background: #000000;
+}
+.snackbar__closeButton__1jpTy:focus {
+  background-image: none;
+}
+.snackbar__closeButton__1jpTy:hover .snackbar__closeIcon__2X6__ {
+  color: #A5ACB0 !important;
+}
+.snackbar__closeButton__1jpTy:active .snackbar__closeIcon__2X6__ {
+  color: #B6BBBF !important;
+}
+</style><style type="text/css">.content-skeleton__contentSkeletonContainer__3tDv- {
+  margin-top: 8px;
+}
+.content-skeleton__cardSkeleton__2RsLA {
+  margin-bottom: 16px;
+}
+.content-skeleton__cardSkeleton__2RsLA svg {
+  display: block;
+  margin-bottom: 16px;
+}
+.content-skeleton__titleSkeleton__mnn30 {
+  margin: 0 0 8px 20px;
+}
+</style><style type="text/css">.spinner__wrapper__1kzPN.spinner__centered__19TLF.spinner__inline__2B47E {
+  text-align: center;
+}
+.spinner__wrapper__1kzPN.spinner__centered__19TLF > .spinner__spinner__1Qtvp {
+  margin: 0 auto;
+}
+.spinner__wrapper__1kzPN.spinner__inline__2B47E > .spinner__spinner__1Qtvp {
+  display: inline-block;
+  vertical-align: middle;
+}
+.spinner__spinner__1Qtvp {
+  background-image: url(https://a.trellocdn.com/prgb/dist/images/spinner.dd88566680cbf35fabbf.gif);
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+.spinner__spinner__1Qtvp.spinner__small__36uxd {
+  background-size: 18px 18px;
+  height: 18px;
+  width: 18px;
+}
+.spinner__spinner__1Qtvp.spinner__modLeft__3jNWW {
+  margin-right: 3px;
+}
+</style><style type="text/css">.dismiss-animation__revealExpandStart__1VXgd {
+  max-height: 0px;
+  opacity: 0.01;
+  transition-property: opacity, max-height;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out, linear;
+}
+.dismiss-animation__revealExpandEnd__3NdPJ {
+  max-height: 300px;
+  opacity: 1;
+}
+.dismiss-animation__fadeCollapseStart__b6oU- {
+  max-height: 300px;
+  opacity: 1;
+  transition-property: opacity, max-height;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out, linear;
+}
+.dismiss-animation__fadeCollapseEnd__23I4g {
+  max-height: 0px;
+  opacity: 0.01;
+}
+</style><style type="text/css">.feedback-link__feedbackLink__2ky-v {
+  color: #17394D;
+  align-items: center;
+  border-radius: 4px;
+  bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  padding: 3px 8px 3px 3px;
+  right: 24px;
+  text-decoration: none;
+}
+.feedback-link__icon__3DONp {
+  font-size: 16px !important;
+  margin-right: 4px;
+}
+.feedback-link__standard__cxcAn {
+  border: 1px solid #E2E4E6;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.feedback-link__standard__cxcAn:hover {
+  color: #17394D;
+  background-color: #EDEFF0;
+}
+.feedback-link__standard__cxcAn:active {
+  color: #17394D;
+  background-color: #D6DADC;
+}
+.feedback-link__floating__2Rfc9 {
+  background-color: #A86CC1;
+  box-shadow: 0 1px 3px 0 rgba(235, 90, 70, 0.16);
+  color: white;
+  height: 22px;
+  padding: 5px 11px;
+  position: fixed;
+  z-index: 4;
+}
+@media only screen and (max-width: 711px) {
+  .feedback-link__floating__2Rfc9 {
+    display: none;
+  }
+}
+.feedback-link__floating__2Rfc9 .feedback-link__icon__3DONp {
+  color: white;
+}
+.feedback-link__floating__2Rfc9:hover {
+  background-color: #89609E;
+  color: white;
+}
+.feedback-link__floating__2Rfc9:active {
+  background-color: #6C547B;
+  color: white;
+}
+.feedback-link__floating__2Rfc9:focus {
+  border: 2px solid #5BA4CF;
+  color: white;
+  padding: 3px 9px;
+}
+</style><style type="text/css">.highlight-section__m-badge-toggle-default__3Q_OM {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.highlight-section__m-badge-toggle-off-idle__2fr6T {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.highlight-section__m-badge-toggle-off-hover__kc45O {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.highlight-section__m-badge-toggle-off-active__15EQF {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.highlight-section__m-badge-toggle-on-idle__1Ypk- {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.highlight-section__m-badge-toggle-on-hover__3kBR_ {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.highlight-section__m-badge-toggle-on-active__2mUGC {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.highlight-section__m-button-no-style__15a5v {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.highlight-section__m-button-no-style__15a5v,
+.highlight-section__m-button-no-style__15a5v:hover,
+.highlight-section__m-button-no-style__15a5v:active,
+.highlight-section__m-button-no-style__15a5v:focus {
+  background: none;
+}
+.highlight-section__highlightSection__sLa3M {
+  padding-bottom: 20px;
+}
+.highlight-section__highlight__1yPmi {
+  display: flex;
+  flex-direction: column;
+  will-change: max-height;
+}
+.highlight-section__highlight__1yPmi:not(:empty) + .highlight-section__highlight__1yPmi {
+  padding-top: 16px;
+}
+.highlight-section__highlight__1yPmi:last-child {
+  padding-bottom: 0;
+}
+.highlight-section__showMoreButton__3Z9M4 {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-decoration: underline;
+}
+.highlight-section__showMoreButton__3Z9M4,
+.highlight-section__showMoreButton__3Z9M4:hover,
+.highlight-section__showMoreButton__3Z9M4:active,
+.highlight-section__showMoreButton__3Z9M4:focus {
+  background: none;
+}
+.highlight-section__showMoreButton__3Z9M4:hover {
+  color: #111;
+}
+.highlight-section__spinnerWrapper__1B-j2 {
+  padding: 19px 0;
+}
+</style><style type="text/css">.up-next-section__upNextCards__3JGAw {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+.up-next-section__upNextCardList__28ABb {
+  display: flex;
+  flex-direction: column;
+}
+.up-next-section__upNextCardListItem__1YFIJ {
+  box-sizing: border-box;
+  position: relative;
+  will-change: max-height;
+}
+.up-next-section__upNextCardListItem__1YFIJ + .up-next-section__upNextCardListItem__1YFIJ {
+  padding-top: 16px;
+}
+.up-next-section__homeNoUpNextCards__124Xl {
+  margin-top: -24px;
+}
+</style><style type="text/css">.tile__m-badge-toggle-default__-J3OJ {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.tile__m-badge-toggle-off-idle__8e-U6 {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tile__m-badge-toggle-off-hover__1eECM {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tile__m-badge-toggle-off-active__mBNAU {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.tile__m-badge-toggle-on-idle__2OmXY {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tile__m-badge-toggle-on-hover__38jgF {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.tile__m-badge-toggle-on-active__2Q5wO {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.tile__m-button-no-style__94uVw {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.tile__m-button-no-style__94uVw,
+.tile__m-button-no-style__94uVw:hover,
+.tile__m-button-no-style__94uVw:active,
+.tile__m-button-no-style__94uVw:focus {
+  background: none;
+}
+.tile__tile__2tVYP {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  height: 48px;
+  overflow: hidden;
+  position: relative;
+}
+.tile__link__3kNHQ {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: border-box;
+  color: #6B808C;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  padding: 8px 40px 8px 8px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 85ms;
+  transition-timing-function: ease;
+}
+.tile__link__3kNHQ,
+.tile__link__3kNHQ:hover,
+.tile__link__3kNHQ:active,
+.tile__link__3kNHQ:focus {
+  background: none;
+}
+.tile__link__3kNHQ:hover {
+  background-color: rgba(9, 45, 66, 0.13);
+}
+.tile__link__3kNHQ:active {
+  background-color: rgba(9, 45, 66, 0.25);
+  background-image: none;
+}
+.tile__link__3kNHQ:focus {
+  background-image: none;
+}
+.tile__thumbnail__3-pqZ {
+  background-size: cover;
+  border-radius: 4px;
+  display: block;
+  flex: 0 0 auto;
+  height: 28px;
+  margin-right: 8px;
+  width: 32px;
+}
+.tile__text__2h6w7 {
+  display: block;
+  margin-right: 8px;
+  overflow: hidden;
+}
+.tile__linkText__BCNab {
+  color: #6B808C;
+}
+.tile__link__3kNHQ:hover .tile__linkText__BCNab,
+.tile__link__3kNHQ:active .tile__linkText__BCNab {
+  color: #17394D;
+}
+.tile__titleText__2TZbr {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #17394D;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.tile__quietText__EHcBH {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #6B808C;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+  margin-top: 1px;
+}
+.tile__secondaryButton__1JRAg {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 24px;
+}
+.tile__secondaryButton__1JRAg,
+.tile__secondaryButton__1JRAg:hover,
+.tile__secondaryButton__1JRAg:active,
+.tile__secondaryButton__1JRAg:focus {
+  background: none;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButton__1JRAg:hover {
+  background-color: rgba(9, 45, 66, 0.13);
+  border: 0;
+  box-shadow: none;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButton__1JRAg:active {
+  background-color: rgba(9, 45, 66, 0.25);
+  border: 0;
+  box-shadow: none;
+}
+.tile__secondaryButtonIcon__2Xk8h {
+  color: transparent !important;
+  transition: 0.15s color;
+}
+.tile__secondaryButtonIcon__2Xk8h.tile__selected__1yvgN,
+.tile__tile__2tVYP:hover .tile__secondaryButtonIcon__2Xk8h.tile__selected__1yvgN {
+  color: #E6C60D !important;
+  display: block;
+}
+.tile__tile__2tVYP:hover .tile__secondaryButtonIcon__2Xk8h {
+  color: #959DA1 !important;
+  display: block;
+}
+.tile__icon__3uDLJ,
+.tile__buttonIcon__1qcR9 {
+  color: #798D99 !important;
+  display: flex !important;
+  height: 28px !important;
+  width: 32px !important;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+.tile__buttonIcon__1qcR9 {
+  background-color: #DFE3E6;
+  box-shadow: 0 1px 0 0 #C2CCD1;
+  border: none;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 85ms;
+  transition-timing-function: ease;
+}
+.tile__link__3kNHQ:hover .tile__buttonIcon__1qcR9,
+.tile__link__3kNHQ:active .tile__buttonIcon__1qcR9 {
+  background-color: #C2CCD1;
+  box-shadow: 0 1px 0 0 #B3BEC4;
+  border: none;
+}
+</style><style type="text/css">.board__boardSection__rUhRs {
+  padding-bottom: 24px;
+}
+</style><style type="text/css">.link__linkSection__2WFin {
+  padding-bottom: 24px;
+}
+</style><style type="text/css">.header-tab-bar__m-badge-toggle-default__3D94V {
+  background-color: #F5F6F7;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+  height: 20px;
+  width: 20px;
+}
+.header-tab-bar__m-badge-toggle-off-idle__2gioE {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.header-tab-bar__m-badge-toggle-off-hover__iQ13b {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.header-tab-bar__m-badge-toggle-off-active__rW6fe {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.header-tab-bar__m-badge-toggle-on-idle__2hrK_ {
+  background-color: #F5F6F7;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.header-tab-bar__m-badge-toggle-on-hover__3beTl {
+  background-color: #EBEEF0;
+  box-shadow: inset 0 0 0 2px #DFE3E6;
+}
+.header-tab-bar__m-badge-toggle-on-active__DTwIp {
+  background-color: #DFE3E6;
+  box-shadow: inset 0 0 0 2px #B3BEC4;
+}
+.header-tab-bar__m-button-no-style__Phx8M {
+  font-weight: 400;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.header-tab-bar__m-button-no-style__Phx8M,
+.header-tab-bar__m-button-no-style__Phx8M:hover,
+.header-tab-bar__m-button-no-style__Phx8M:active,
+.header-tab-bar__m-button-no-style__Phx8M:focus {
+  background: none;
+}
+.header-tab-bar__headerTab__1siFq {
+  align-items: center;
+  color: rgba(9, 45, 66, 0.71);
+  display: flex;
+  margin-right: 8px;
+  padding: 0 24px 8px 12px;
+}
+.header-tab-bar__headerTab__1siFq:hover {
+  color: rgba(9, 45, 66, 0.77);
+}
+.header-tab-bar__headerTab__1siFq:active {
+  color: rgba(9, 45, 66, 0.89);
+}
+.header-tab-bar__headerTab__1siFq.header-tab-bar__selected__JFnIM {
+  margin-bottom: -2px;
+  color: #026AA7;
+  border-bottom: 2px solid #5BA4CF;
+}
+.header-tab-bar__headerTab__1siFq:not(.header-tab-bar__selected__JFnIM) {
+  cursor: pointer;
+  text-decoration: none;
+}
+@media only screen and (max-width: 711px) {
+  .header-tab-bar__headerTab__1siFq {
+    width: 50%;
+    justify-content: center;
+    padding-right: 12px;
+    margin-right: 0;
+  }
+}
+.header-tab-bar__headerTabBar__3hYkb {
+  border-bottom: 2px solid rgba(9, 45, 66, 0.25);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.header-tab-bar__icon__3r2K_ {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 2px;
+  color: #798D99;
+}
+.header-tab-bar__headerTab__1siFq:hover .header-tab-bar__icon__3r2K_ {
+  color: #516B7A;
+}
+.header-tab-bar__headerTab__1siFq:active .header-tab-bar__icon__3r2K_ {
+  color: #516B7A;
+}
+.header-tab-bar__headerTab__1siFq.header-tab-bar__selected__JFnIM .header-tab-bar__icon__3r2K_ {
+  color: #0079BF;
+}
+.header-tab-bar__iconSpan__n7c7W {
+  color: currentcolor !important;
+}
+</style><style type="text/css">.team-card-due-scroll-navigation__countContainer__1ozu8 {
+  align-items: center;
+  background-color: rgba(9, 45, 66, 0.13);
+  border-radius: 18px;
+  color: rgba(9, 45, 66, 0.54);
+  display: flex;
+  font-size: 10px;
+  height: 16px;
+  justify-content: center;
+  min-width: 24px;
+}
+.team-card-due-scroll-navigation__selected__30LjL.team-card-due-scroll-navigation__countContainer__1ozu8,
+button:hover .team-card-due-scroll-navigation__countContainer__1ozu8,
+button:active .team-card-due-scroll-navigation__countContainer__1ozu8 {
+  color: rgba(9, 45, 66, 0.71);
+}
+.team-card-due-scroll-navigation__cardDueTabButton__jVUSR {
+  margin-top: 4px;
+}
+.team-card-due-scroll-navigation__cardDueContainer__Kgeta:first-of-type .team-card-due-scroll-navigation__cardDueTabButton__jVUSR {
+  margin-top: 0;
+}
+</style><style type="text/css">.team-cards-due-empty__empty__3gi8R {
+  align-items: center;
+  background-color: #EBEEF0;
+  border-radius: 4px;
+  color: #6B808C;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  margin: -8px 8px 40px 8px;
+  padding: 8px;
+}
+.team-cards-due-empty__emptyToday__32zvn {
+  align-items: center;
+  border-top: 1px solid #EBEEF0;
+  display: flex;
+  flex-direction: column;
+  margin: -8px 8px 40px 8px;
+  padding: 16px;
+}
+.team-cards-due-empty__image__1XZuu {
+  display: block;
+}
+.team-cards-due-empty__title__WBsd9 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.team-cards-due-empty__subtitle__1m0e6 {
+  color: #6B808C;
+}
+</style><style type="text/css">.team-cards-due-section__dueDateSection__37Ql8 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 16px 0 8px;
+}
+.team-cards-due-section__dueDateCard__12R7F {
+  padding-bottom: 16px;
+  padding-left: 8px;
+}
+.team-cards-due-section__dueList__2MnTD {
+  margin: -8px 0 16px 0;
+}
+.team-cards-due-section__scrollNavContainer__1iDzf {
+  flex: 0 0 auto;
+  padding-top: 40px;
+  width: 264px;
+}
+@media only screen and (max-width: 711px), only screen and (max-width: 1091px) and (min-width: 712px) {
+  .team-cards-due-section__scrollNavContainer__1iDzf {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px), only screen and (max-width: 1371px) and (min-width: 992px) {
+  .team-cards-due-section__scrollNavContainer__1iDzf.team-cards-due-section__pinnedBoardsMenu__13SC- {
+    display: none;
+  }
+}
+.team-cards-due-section__dueDateLists__3Kjkq {
+  flex: 0 0 auto;
+  width: 436px;
+}
+</style>
+  <script>TrelloPerf.stopMeasurement(TrelloPerf.Keys.APP);</script>
+  <script>(function(b,c){var a=b.createElement("link");a.href=c;a.rel="stylesheet";a.type="text/css";b.getElementsByTagName("head")[0].appendChild(a)})(document,"https://a.trellocdn.com/prgb/dist/images.0a827509b19560815767.css");</script><link href="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/images.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/core.css" onerror="_failed(this)">
+
+  <link rel="mask-icon" href="https://a.trellocdn.com/prgb/dist/images/pinned-tab-icon.225c8d1cf8bbf74add43.svg" color="#0079BF">
+
+  <!-- For third-generation iPad with high-resolution Retina display and iOS7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-152x152-precomposed.0307bc39ec6c9ff499c8.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-144x144-precomposed.0dbf6daf256eb7678e5e.png">
+  <!-- For iPhone with high-resolution Retina display and iOS7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-120x120-precomposed.a68051b5c9144abe859b.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-114x114-precomposed.7f4a80b64fd8fd99840b.png">
+  <!-- For first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-72x72-precomposed.91a3a04ec68a60903801.png">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://a.trellocdn.com/prgb/dist/images/ios/apple-touch-icon-precomposed.8de2074e8a785dd5d498.png">
+
+  <!-- To enable tab-to-search in Chrome -->
+  <link type="application/opensearchdescription+xml" rel="search" href="https://trello.com/osd.xml">
+<link id="favicon" rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAC5ElEQVR4nO2bv08iURDHX230DEaDCpcAQV0T5YcLWTYxRiMWRAS3MFQmFhSa0BtisYWVhZVwYKzPnOWZM2d1Fi6F/BHaq4WAxPAjmSsuXLg7uV10ffvAmeRbLvOdDwvJvHlDSIsw2XsPncGRW++6A+aT00+hPb4cSQk1KSsCy4qkhFpojy/PJ6efvOsOcAZHbk323sNWdf4T5inTDr/hNLwQvcVvOME8Zdr5b/H2OfN19ECoGm32rRQ9EKr2OfP1s8U7FoZvjDZIS46F4Zs/ih/1DMid8PvWS5GUUBudGZB/A/DHxww3RVv++BgQQggZdPYdrWbEutGGaGs1I9YHnX1HZHLFem+0GaM0uWK9J4GtibYeWpTdICY4cMVswIWtLeWK2UBMcBCUPS82+Na5/PExIEHZXdH6wOwaD1++fgbl6hIKpQdQC+XqEr7/+Aaza3zbxdPIFZTdFbK879MEILG9qWqiVRTLBUhsb2o2RivX8r6vQqLpgOof4Owa/2JDzca0fDs0c0XTgTpRf008cH5x9mpTAAAnp8ewKLuZyNWQKgAxwUEur+hiKpdXQExwTOTSDMAVs+liCACgUHoAV8zGRC7NALiwVTdTAABc2MpELgSAABAAAkAACAABIAAEgAAQAAJAAAgAASAAJkzpeSJUfCx03okQk2eCNAEsym5dT4W1TIqYAiBl9ZkLlMpFzRMi5gBI2ddNhkrlYltTKCYBNN6E84szyOUVKD4WVD83l1fg5PS47TkkswCk7K9JUTvTYS2ToI4CQEMIAAEgAASAABAAAmgtI1pUpgAY0aIyBcCIFpUpAFKWfovKHAApS7dFpQpAy0XJ5jeBRotKS9F0oK75qmxDNFpUWlre91XI0q63a3eE1LS06622fV2+mxTYmgAyHrLcGW3EKI2HLHek/2NP5r2uzHyw9HzCpSlCCBni+pPRVPcuTP6tSEqoDXH9SVycxNXZZ+JdL083x3tZn/8JlEmTRM8sMnkAAAAASUVORK5CYII="></head>
+<body class="window-up">
+  <div id="root" style="display: none;"></div>
+  <div id="classic-body" class="firefox firefox-63 mac body-no-webkit-scrollbars body-board-view" style="background-color: rgb(81, 152, 57);">
+    <div id="classic">
+      <div id="nocss">
+        Your browser was unable to load all of Trello's resources.  They
+ may have been blocked by your firewall, proxy or browser configuration.<br>
+        Press Ctrl+F5 or Ctrl+Shift+R to have your browser try again and if that doesn't work, check out our <a href="http://help.trello.com/article/771-loading-resources-from-trellos-cdn">troubleshooting guide</a>.
+        <hr>
+      </div>
+      <noscript class="big-message"><h1>To use Trello, please enable JavaScript.</h1></noscript>
+      <div id="boards-drawer"><div class="boards-drawer"><div class="boards-drawer-header"><h3>Boards</h3></div><div class="board-drawer-content u-fancy-scrollbar"><input class="js-search-boards" type="text" name="search-boards" placeholder="Find boards by name…"><div class="js-board-drawer-boards"><div><p class="quiet u-text-align-center hide" style="margin: 6px 4px 0 0; padding: 8px 12px;">No Boards</p><div class="starred-sidebar-boards-list js-starred-boards"><div><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-star sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Starred Boards</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide">Star your most important boards to keep them right at your fingertips.</div><ul class="sidebar-boards-list js-board-list ui-sortable" style=""><li class="compact-board-tile starred"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #519839;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/KzwZ1qQn/hackaton-unimed"><span class="compact-board-tile-link-thumbnail" style="background-color: #519839;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Hackaton Unimed">Hackaton Unimed</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board icon-star-active" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="#">Show less active boards (0)</a></div></div></div></div><div class="js-recent-boards"><div class="hide"><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-clock sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Recent Boards</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"></ul><div><a class="dark-hover quiet-button js-show-all-section-boards" href="#"></a></div></div></div></div><div class="js-all-boards"><div><div class="sidebar-section-header quiet js-sidebar-section-header bold"><span class="icon-sm icon-board sidebar-section-header-icon"></span><span class="sidebar-section-header-title">Personal Boards</span><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #B04632;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/bmXqnPai/backend"><span class="compact-board-tile-link-thumbnail" style="background-color: #B04632;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="BackEnd">BackEnd</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li><li class="compact-board-tile starred"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #519839;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/KzwZ1qQn/hackaton-unimed"><span class="compact-board-tile-link-thumbnail" style="background-color: #519839;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Hackaton Unimed">Hackaton Unimed</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board icon-star-active" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #0079BF;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/LtZiv17x/welcome-board"><span class="compact-board-tile-link-thumbnail" style="background-color: #0079BF;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Welcome Board">Welcome Board</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="#">Show less active boards (0)</a></div></div></div><div class=""><div class="sidebar-section-header quiet js-sidebar-section-header bold"><a class="dark-hover" href="https://trello.com/heavyconnect2"><img class="sidebar-section-header-icon" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/30.png" alt="HeavyConnect"><span class="sidebar-section-header-title mod-clickable">HeavyConnect</span><span class="icon-sm icon-business-class sidebar-section-header-bc-icon hide js-has-business-class"></span></a><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile has-unread-activity"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #4BBF6B;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/ICmjLNF0/buisness"><span class="compact-board-tile-link-thumbnail" style="background-color: #4BBF6B;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Buisness">Buisness</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread any" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #0079BF;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/t0yf7eVU/design-ui"><span class="compact-board-tile-link-thumbnail" style="background-color: #0079BF;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Design/UI">Design/UI</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-image: url('https://d2k1ftgv7pobq7.cloudfront.net/images/backgrounds/mountain/medium.jpg');"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link light" href="https://trello.com/b/2I0Gzg6L/ionic-app"><span class="compact-board-tile-link-thumbnail" style="background-image: url('https://d2k1ftgv7pobq7.cloudfront.net/images/backgrounds/mountain/medium.jpg');"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Ionic App">Ionic App</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #0079BF;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/Mg5lfBVJ/web-app"><span class="compact-board-tile-link-thumbnail" style="background-color: #0079BF;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Web App">Web App</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="#">Show less active boards (0)</a></div></div></div><div class=""><div class="sidebar-section-header quiet js-sidebar-section-header bold"><a class="dark-hover" href="https://trello.com/multimediadesignprogramming"><span class="icon-sm icon-organization sidebar-section-header-icon"></span><span class="sidebar-section-header-title mod-clickable">Multimedia Design &amp; Programming</span><span class="icon-sm icon-business-class sidebar-section-header-bc-icon hide js-has-business-class"></span></a><span class="icon-sm icon-remove sidebar-section-header-toggle-icon dark-hover js-collapse-section"></span><span class="icon-sm icon-add sidebar-section-header-toggle-icon dark-hover js-expand-section hide"></span></div><div class="js-section-content"><div class="js-starred-empty-state sidebar-starred-boards-empty-state hide"></div><ul class="sidebar-boards-list js-board-list"><li class="compact-board-tile"><div class="compact-board-tile-wrapper"><span class="compact-board-tile-background" style="background-color: #838C91;"></span><span class="compact-board-tile-fade"></span><a class="js-open-board compact-board-tile-link dark" href="https://trello.com/b/Nn0bwysc/project-2-multimedia-design-programming"><span class="compact-board-tile-link-thumbnail" style="background-color: #838C91;"></span><span class="compact-board-tile-link-text details"><span class="compact-board-tile-link-text-name" title="Project 2 - Multimedia Design &amp; Programming">Project 2 - Multimedia Design &amp; Programming</span></span><span class="compact-board-tile-link-options"><span class="compact-board-tile-link-options-unread js-unread" title="There is new activity on this board."></span><span class="icon-sm icon-star compact-board-tile-link-options-star js-star-board" title="Click to star this board. It will show up at top of your boards list."></span></span></a></div></li></ul><div><a class="dark-hover quiet-button js-show-all-section-boards hide" href="#">Show less active boards (0)</a></div></div></div></div></div></div><div class="js-board-drawer-buttons"><div><a class="quiet-button js-add-board" href="#">Create new board…</a><a class="quiet-button js-pin" href="#">Always keep this menu open.</a><a class="quiet-button hide js-unpin" href="#">Don’t keep this menu open.</a><a class="quiet-button js-open-closed-boards" href="#">See closed boards…</a></div></div></div></div></div>
+      <p id="notification"></p>
+      <div id="surface">
+        <div id="header"><a class="header-logo js-home-via-logo" href="https://trello.com/" aria-label="Trello Home"><span class="header-logo-loading"></span><span class="header-logo-default"></span></a><div class="header-back-button"><a class="header-btn js-back-menu" href="https://trello.com/" aria-label="Back to Home"><span class="header-btn-icon icon-lg icon-house light"></span></a></div><div class="header-boards-button"><a class="header-btn header-boards js-boards-menu" href="#"><span class="header-btn-icon icon-lg icon-board light"></span><span class="header-btn-text">Boards</span></a></div><div><a class="header-btn open-search-btn js-open-search-page" href="https://trello.com/search" title="Search for boards, cards, members, and teams."><span class="header-btn-icon icon-lg icon-search light"></span></a><div class="header-search"><input class="header-search-input js-search-input js-disable-on-dialog disabled-for-dialog" type="text" autocomplete="off" autocorrect="off" spellcheck="false" disabled="disabled"><span class="header-search-icon icon-lg icon-search light js-search-icon"></span><span class="header-search-icon header-search-icon-close icon-lg icon-close light hide js-close-icon js-search-close"></span><a class="header-search-icon header-search-icon-open icon-lg icon-external-link light hide js-open-button js-open-search-page" href="#"></a></div></div><div><a class="header-btn header-woof woof-hide" href="#"><span class="taco-talk-small-icon"></span><span class="header-btn-text"><span class="left-arrow"></span><span class="js-phrase">New stuff!</span></span></a></div><div class="header-user"><a class="header-btn js-open-add-menu" href="#" aria-label="Create Board or Organization"><span class="header-btn-icon icon-lg icon-add light"></span></a><a class="header-btn header-info js-open-header-info-menu" href="#" aria-label="Open Information Menu"><span class="header-btn-icon icon-lg icon-information light"></span></a><a class="header-btn header-notifications js-open-header-notifications-menu other-notifications" href="#" aria-label="Notifications"><span class="header-btn-icon icon-lg icon-notification light"></span></a><a class="header-btn header-avatar js-open-header-member-menu" href="#" aria-label="Open Member Menu"><span class="member"><img class="member-avatar" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/30_002.png" srcset="https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/30.png 1x, https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/50.png 2x" alt="Carlos E. Domingues (carlosceds)" title="Carlos E. Domingues (carlosceds)" width="30" height="30"><span id="556de6d512a27e3cbb5b430d-avatar"></span><span class="member-gold-badge" title="This member has Trello Gold."></span></span></a></div></div><div class="header-banner mod-warning logged-in-public-board-banner"><div class="logged-in-public-board-message"><div class="logged-in-public-board-body"><span class="icon-sm icon-public icon-lg icon-public"></span><span>This board is set to public. You can change its visibility at any time.</span></div><a class="js-learn-more" href="https://help.trello.com/article/789-changing-the-visibility-of-a-board-to-public-private-or-team" target="_blank">Learn more here</a></div><a class="icon-lg icon-close js-close-banner" href="#"></a></div>
+        <!-- If something ever goes really wrong, this is where -->
+        <!-- We're intentionally embedding styling, in case there's a CDN issue -->
+        <!-- The format of the comment is recognized by the server -->
+        <!-- htmlmin:ignore -->
+        
+        <!-- htmlmin:ignore -->
+        <div id="content"><div class="board-wrapper is-show-menu"><div class="board-main-content"><div class="board-header u-clearfix js-board-header"><a class="board-header-btn board-header-btn-name js-rename-board" href="#"><span class="board-header-btn-text" dir="auto">Hackaton Unimed</span></a><a class="board-header-btn js-star-board board-header-btn-enabled" href="#" title="Click to star or unstar this board. Starred boards show up at the top of your boards list." aria-label="Star or Unstar Board"><span class="icon-sm icon-star board-header-btn-icon"></span></a><div class="board-header-btns mod-left"><a class="board-header-btn hide js-open-desc js-fill-desc" href="#"><span class="icon-sm icon-description board-header-btn-icon"></span></a><span class="board-header-btn-divider"></span><a class="board-header-btn board-header-btn-without-icon board-header-btn-text js-add-board-to-team" href="#">Personal</a><span class="board-header-btn-divider"></span><a id="permission-level" class="board-header-btn perms-btn js-change-vis" href="#" title="Anyone on the internet (including Google) can see this board. Only board members can edit."><span class="board-header-btn-icon icon-sm icon-public"></span><span class="board-header-btn-text">Public</span></a><span class="board-header-btn-divider js-collection-divider hide"></span><a class="board-header-btn hide js-collection" href="#"><img class="board-header-btn-icon icon-sm collection-icon-img dark-icon" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/collections-black.svg"><img class="board-header-btn-icon icon-sm collection-icon-img light-icon" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/collections.svg"></a></div><span class="board-header-btn-divider"></span><div class="board-header-btns mod-left"><div class="board-header-facepile js-fill-facepile js-list-draggable-board-members"><div class="member js-member ui-draggable"><span class="member-initials" title="Anderson Bertoldo (andersonbertoldo)">AB</span><span id="562954b48a02a5f762c05480-avatar"></span><span class="member-gold-badge" title="This member has Trello Gold."></span></div><div class="member js-member ui-draggable"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span id="5bf97941df87094cc86db2f5-avatar"></span><span class="member-gold-badge" title="This member has Trello Gold."></span></div><div class="member js-member long-initials ui-draggable"><img class="member-avatar" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/30_002.png" srcset="https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/30.png 1x, https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/50.png 2x" alt="Carlos E. Domingues (carlosceds)" title="Carlos E. Domingues (carlosceds)" width="30" height="30"><span id="556de6d512a27e3cbb5b430d-avatar"></span><span class="member-type admin" title="This member is an admin of this board."></span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="board-header-btns mod-left"><a id="member-count" class="board-header-btn board-header-btn-round pile js-open-show-all-board-members js-fill-board-member-count" href="#">3</a><span id="member-count-notifications"></span></div><a class="board-header-btn board-header-btn-round js-open-manage-board-members" href="#" title="Invite To Board"><span class="icon-sm icon-add-member"></span></a></div><div class="board-header-btns mod-left"><div class="guided-tour-tooltip guided-tour-tooltip-invite js-guided-tour-tooltip js-tool-tip-invite hide"><div class="guided-tour-tooltip-pointer"></div><div class="guided-tour-tooltip-body"><h3>Invite Board Members</h3>Click here anytime to invite people to your board and start working together.</div></div></div><div class="board-header-btns mod-right"><a class="board-header-btn board-header-btn-filter-indicator hide js-filter-cards-indicator" href="#"><span class="icon-sm icon-filter board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Filtering is on.</span><span class="icon-sm icon-close board-header-btn-icon-close js-filter-card-clear"></span></a><a class="board-header-btn sub-btn hide js-board-header-subscribed" href="#"><span class="icon-sm icon-subscribe board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Watching</span></a><a class="board-header-btn calendar-btn hide js-calendar" href="#"><span class="icon-sm icon-calendar board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Calendar</span></a><span class="js-plugin-header-btns"><span class="board-header-plugin-btns hide"></span></span><a class="board-header-btn mod-show-menu js-show-sidebar" href="#"><span class="icon-sm icon-overflow-menu-horizontal board-header-btn-icon"></span><span class="board-header-btn-text u-text-underline">Show Menu</span></a></div><span id="board-header-notification"></span></div><div class="board-warnings u-clearfix js-board-warnings hide"></div><div class="board-canvas"><div id="board" class="u-fancy-scrollbar js-no-higher-edits js-list-sortable ui-sortable"><div class="js-list list-wrapper"><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">To Do</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="To Do" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; overflow-wrap: break-word; height: 30px;">To Do</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">0 cards</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"></div><a class="open-card-composer js-open-card-composer" href="#"><span class="icon-sm icon-add"></span><span class="js-add-a-card">Add a card</span><span class="js-add-another-card hide">Add another card</span></a></div><div class="guided-tour-tooltip guided-tour-tooltip-card-front js-guided-tour-tooltip js-tool-tip-card-front hide"><div class="guided-tour-tooltip-pointer"></div><div class="guided-tour-tooltip-body"><h3>Create your first card</h3>Click here to create a card. Keep the title short to make it easier to scan cards on your board.</div></div><div class="guided-tour-tooltip guided-tour-tooltip-card-back js-guided-tour-tooltip js-tool-tip-card-back hide"><div class="guided-tour-tooltip-pointer"></div><div class="guided-tour-tooltip-body"><h3>Open a card to add details</h3>Click anywhere on a card to open it and add information to it.</div></div></div><div class="js-list list-wrapper"><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Doing</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Doing" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; overflow-wrap: break-word; height: 30px;">Doing</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">3 cards</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/9uFnkecN/11-avalia%C3%A7%C3%A3o-de-pesquisa"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-blue mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#11</span>Avaliação de Pesquisa</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/nzMcr3qi/12-desenvolvimento-tela-avalia%C3%A7%C3%A3o"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-green mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#12</span>Desenvolvimento - Tela Avaliação</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/qkeCyxeU/9-imagem-avalia%C3%A7%C3%A3o-conclu%C3%ADda"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-red mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#9</span>Imagem - Avaliação concluída</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a></div><a class="open-card-composer js-open-card-composer" href="#"><span class="icon-sm icon-add"></span><span class="js-add-a-card hide">Add a card</span><span class="js-add-another-card">Add another card</span></a></div><div class="guided-tour-tooltip guided-tour-tooltip-list js-guided-tour-tooltip js-tool-tip-list hide"><div class="guided-tour-tooltip-pointer"></div><div class="guided-tour-tooltip-body"><h3>Make Lists Your Own</h3>Click
+ on a list title to rename it. Or click and drag a whole list to 
+reposition it on your board. Create as many lists as you like.</div></div></div><div class="js-list list-wrapper"><div class="list js-list-content"><div class="list-header js-list-header u-clearfix is-menu-shown"><div class="list-header-target js-editing-target"></div><h2 class="list-header-name-assist js-list-name-assist" dir="auto">Done</h2><textarea class="list-header-name mod-list-name js-list-name-input" aria-label="Done" spellcheck="false" dir="auto" maxlength="512" style="overflow: hidden; overflow-wrap: break-word; height: 30px;">Done</textarea><div class="list-header-extras"><span class="list-header-extras-subscribe js-list-subscribed hide"><span class="icon-lg icon-subscribe"></span></span><a class="list-header-extras-menu dark-hover js-open-list-menu icon-lg icon-overflow-menu-horizontal" href="#"><div></div></a></div><p class="list-header-num-cards hide js-num-cards">7 cards</p></div><div class="list-cards u-fancy-scrollbar u-clearfix js-list-cards js-sortable ui-sortable"><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/kFKLyCB8/1-cria%C3%A7%C3%A3o-personas"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-blue mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#1</span>Criação Personas</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/Vm5Ou3YD/3-jornada-de-usu%C3%A1rio"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-blue mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#3</span>Jornada de usuário</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable is-covered ui-droppable" href="https://trello.com/c/ol8Hpo5R/5-ajustar-resolu%C3%A7%C3%A3o-logo-unimed"><div class="list-card-cover js-card-cover" style="background-color: rgb(4, 156, 92); background-image: url(&quot;https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf979af2d0cfa419659651c/868131887485615ae4759cefb6c4e87a/Logo_Unimed.png&quot;); height: 245px; background-size: cover;"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers" style="height: 245px;"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-red mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#5</span>Ajustar Resolução - Logo Unimed</span><div class="badges"><span class="js-badges"><div class="badge" title="Attachments"><span class="badge-icon icon-sm icon-attachment"></span><span class="badge-text">1</span></div></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable is-covered ui-droppable" href="https://trello.com/c/I5q5e2fr/7-background-relat%C3%B3rio"><div class="list-card-cover js-card-cover" style="background-color: rgb(4, 76, 52); background-image: url(&quot;https://trello-attachments.s3.amazonaws.com/5bf97a10512afb6cea415437/600x964/24962c0ca5b13c60e407b5e3d3944f3b/relatorio_model.png&quot;); height: 260px; background-size: contain;"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers" style="height: 260px;"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-red mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#7</span>Background - Relatório</span><div class="badges"><span class="js-badges"><div class="badge" title="Attachments"><span class="badge-icon icon-sm icon-attachment"></span><span class="badge-text">2</span></div></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable is-covered ui-droppable" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o"><div class="list-card-cover js-card-cover" style="background-color: rgb(4, 76, 52); background-image: url(&quot;https://trello-attachments.s3.amazonaws.com/5bf97a1803b4bc849436d2b9/600x964/d3705620d62f68d8f39732fedbd8794b/avaliacao_background_model.png&quot;); height: 260px; background-size: contain;"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers" style="height: 260px;"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-red mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#8</span>Background - Avaliação</span><div class="badges"><span class="js-badges"><div class="badge" title="Attachments"><span class="badge-icon icon-sm icon-attachment"></span><span class="badge-text">3</span></div></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable is-covered ui-droppable" href="https://trello.com/c/twNAZ2F8/6-background-login"><div class="list-card-cover js-card-cover" style="background-color: rgb(4, 76, 52); background-image: url(&quot;https://trello-attachments.s3.amazonaws.com/5bf979b62d619347a3080657/600x964/eca9b8c6feaa0ab71836e118450096ef/login_background_portrait_3.png&quot;); height: 260px; background-size: contain;"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers" style="height: 260px;"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-red mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#6</span>Background - Login</span><div class="badges"><span class="js-badges"><div class="badge" title="Attachments"><span class="badge-icon icon-sm icon-attachment"></span><span class="badge-text">4</span></div></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a><a class="list-card js-member-droppable ui-droppable" href="https://trello.com/c/DjmFtNzm/2-template-projeto-app"><div class="list-card-cover js-card-cover"></div><span class="icon-sm icon-edit list-card-operation dark-hover js-open-quick-card-editor js-card-menu"></span><div class="list-card-stickers-area js-stickers-area hide"><div class="stickers js-card-stickers"></div></div><div class="list-card-details js-card-details"><div class="list-card-labels js-card-labels"><span class="card-label card-label-green mod-card-front" title="">&nbsp;</span></div><span class="list-card-title js-card-name" dir="auto"><span class="card-short-id hide">#2</span>Template projeto app</span><div class="badges"><span class="js-badges"></span><span class="custom-field-front-badges js-custom-field-badges"><span></span></span><span class="js-plugin-badges"><span></span></span></div><div class="list-card-members js-list-card-members"></div></div><p class="list-card-dropzone">Drop files to upload.</p><p class="list-card-dropzone-limited">Too many attachments.</p><p class="list-card-dropzone-restricted">Not allowed by your enterprise.</p></a></div><a class="open-card-composer js-open-card-composer" href="#"><span class="icon-sm icon-add"></span><span class="js-add-a-card hide">Add a card</span><span class="js-add-another-card">Add another card</span></a></div></div><div class="js-add-list list-wrapper mod-add is-idle"><form><a class="open-add-list js-open-add-list" href="#"><span class="placeholder"><span class="icon-sm icon-add"></span>Add another list</span></a><input class="list-name-input" type="text" name="name" placeholder="Enter list title..." autocomplete="off" dir="auto" maxlength="512"><div class="list-add-controls u-clearfix"><input class="primary mod-list-add-button js-save-edit" type="submit" value="Add List"><a class="icon-lg icon-close dark-hover js-cancel-edit" href="#"></a></div></form></div></div></div></div><div class="board-menu js-fill-board-menu"><div class="board-menu-container"><div class="board-menu-tab-content"><div class="board-menu-header js-board-menu-title is-board-menu-default-view is-in-frame"><div class="board-menu-header-content"><a class="board-menu-header-back-button icon-lg icon-back js-pop-widget-view" href="#" title="Go back."></a><h3 class="board-menu-header-title js-board-menu-title-text">Menu</h3><a class="board-menu-header-close-button icon-lg icon-close js-hide-sidebar" href="#" title="Close the board menu."></a></div><hr class="board-menu-header-divider"></div><div class="board-menu-content u-fancy-scrollbar js-board-menu-content-wrapper"><div class="board-menu-content-frame"><p class="error js-file-too-large" style="margin: 12px 0 6px; display:none;">File too large. 10mb limit.</p><ul class="board-menu-navigation"><li class="board-menu-navigation-item mod-background"><a class="board-menu-navigation-item-link js-change-background" href="#"><span class="board-menu-navigation-item-link-icon js-fill-background-preview" style="background-color: rgb(81, 152, 57);"></span>&nbsp;Change Background</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-card-filter" href="#"><span class="icon-sm icon-filter board-menu-navigation-item-link-icon"></span>&nbsp;Filter Cards</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-stickers" href="#"><span class="icon-sm icon-sticker board-menu-navigation-item-link-icon"></span>&nbsp;Stickers</a></li><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-more" href="#"><span class="icon-sm icon-overflow-menu-horizontal board-menu-navigation-item-link-icon"></span>&nbsp;More</a></li></ul><hr><ul class="board-menu-navigation"><li class="board-menu-navigation-item"><a class="board-menu-navigation-item-link js-open-power-ups" href="#"><span class="icon-sm icon-power-up board-menu-navigation-item-link-icon"></span>&nbsp;Power-Ups&nbsp;<span class="board-menu-navigation-item-link-count js-enabled-power-up-count"></span><span class="board-menu-navigation-item-new js-power-up-new hide">New</span><span class="board-menu-navigation-item-link-warning js-power-up-disable-timer hide"></span><div class="board-menu-navigation-item-link-summary">&nbsp;Calendar, Google Drive and more...</div></a></li></ul><ul class="board-menu-navigation js-power-up-slots"></ul><ul class="board-menu-navigation js-power-up-upsell-slots"><li class="board-menu-navigation-item mod-power-up-slot"><a class="board-menu-navigation-item-link js-power-up-empty-slot" href="#"><span class="board-menu-navigation-item-link-icon"></span>&nbsp;Add Power-Up...</a></li></ul><hr><a class="board-menu-section-header js-open-activity" href="#"><span class="board-menu-section-header-icon icon-lg icon-activity"></span><span class="board-menu-section-header-title">Activity</span><span class="board-menu-section-header-count js-unread-activity-count"></span></a><div class="js-menu-action-list"><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/qkeCyxeU">Imagem - Avaliação concluída</a> from To Do to Doing</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:13:16.551Z" href="https://trello.com/c/qkeCyxeU/9-imagem-avalia%C3%A7%C3%A3o-conclu%C3%ADda#action-5bf994bcf4bc895c2eb60b2e" title="November 24, 2018 4:13 PM">7 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> archived <a class="action-card" href="https://trello.com/c/fvuLx2Lh">Imagem - Régua de Notas</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:13:14.804Z" href="https://trello.com/c/fvuLx2Lh/13-imagem-r%C3%A9gua-de-notas#action-5bf994ba6dc0aa84b5428f86" title="November 24, 2018 4:13 PM">7 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> archived <a class="action-card" href="https://trello.com/c/jktQJCIp">Imagens - Notas - Caretinhas</a></div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:13:03.043Z" href="https://trello.com/c/jktQJCIp/10-imagens-notas-caretinhas#action-5bf994af7a7025026b04ffc3" title="November 24, 2018 4:13 PM">7 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/I5q5e2fr">Background - Relatório</a> from Doing to Done</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:12:49.469Z" href="https://trello.com/c/I5q5e2fr/7-background-relat%C3%B3rio#action-5bf994a11ee75927af8b8d17" title="November 24, 2018 4:12 PM">7 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a10512afb6cea415437/f80e8cfce61f44438b404b027763925d/relatorio_model.png" data-idattachment="5bf994958fc4be5b05082643">relatorio_model.png</a> to <a class="action-card" href="https://trello.com/c/I5q5e2fr">Background - Relatório</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:12:38.090Z" href="https://trello.com/c/I5q5e2fr/7-background-relat%C3%B3rio#action-5bf994968fc4be5b05082644" title="November 24, 2018 4:12 PM">7 minutes ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a10512afb6cea415437/f80e8cfce61f44438b404b027763925d/relatorio_model.png" target="_blank" data-idattachment="5bf994958fc4be5b05082643"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/relatorio_model.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a10512afb6cea415437/fd5890a5eb8ffeb7970b84ddf6edd6fc/relatorio_background_1.png" data-idattachment="5bf9949182ac336fb0e433d9">relatorio_background_1.png</a> to <a class="action-card" href="https://trello.com/c/I5q5e2fr">Background - Relatório</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:12:33.252Z" href="https://trello.com/c/I5q5e2fr/7-background-relat%C3%B3rio#action-5bf9949182ac336fb0e433da" title="November 24, 2018 4:12 PM">8 minutes ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a10512afb6cea415437/fd5890a5eb8ffeb7970b84ddf6edd6fc/relatorio_background_1.png" target="_blank" data-idattachment="5bf9949182ac336fb0e433d9"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/relatorio_background_1.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" data-idattachment="5bf991fdbcebfa4c263f5425">avaliacao_background_model.png</a> to <a class="action-card" href="https://trello.com/c/Rhwz0P8k">Background - Avaliação</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:01:33.449Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf991fdbcebfa4c263f5427" title="November 24, 2018 4:01 PM">19 minutes ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" target="_blank" data-idattachment="5bf991fdbcebfa4c263f5425"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_model.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/I5q5e2fr">Background - Relatório</a> from To Do to Doing</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:58:45.188Z" href="https://trello.com/c/I5q5e2fr/7-background-relat%C3%B3rio#action-5bf99155896e6c8d2cd7f66a" title="November 24, 2018 3:58 PM">21 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" data-idattachment="5bf9912f54d7f18efde4064c">avaliacao_background_2.png</a> to <a class="action-card" href="https://trello.com/c/Rhwz0P8k">Background - Avaliação</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:58:07.630Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf9912f54d7f18efde40652" title="November 24, 2018 3:58 PM">22 minutes ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" target="_blank" data-idattachment="5bf9912f54d7f18efde4064c"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_2.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/Rhwz0P8k">Background - Avaliação</a> from Doing to Done</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:38.717Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990d69675f3340cda62ce" title="November 24, 2018 3:56 PM">23 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" data-idattachment="5bf990d02894e16c195cc5be">avaliacao_background.png</a> to <a class="action-card" href="https://trello.com/c/Rhwz0P8k">Background - Avaliação</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:32.909Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990d02894e16c195cc5c0" title="November 24, 2018 3:56 PM">24 minutes ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" target="_blank" data-idattachment="5bf990d02894e16c195cc5be"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/Rhwz0P8k">Background - Avaliação</a> from To Do to Doing</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:24.150Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990c8a60cd545a31d2d3a" title="November 24, 2018 3:56 PM">24 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved <a class="action-card" href="https://trello.com/c/fvuLx2Lh">Imagem - Régua de Notas</a> from Doing to To Do</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:22.018Z" href="https://trello.com/c/fvuLx2Lh/13-imagem-r%C3%A9gua-de-notas#action-5bf990c606a59a070539bae9" title="November 24, 2018 3:56 PM">24 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf979b62d619347a3080657/f6708c3d87ed13157dafa92a1b064d3c/login_background_portrait_3.png" data-idattachment="5bf98a7d816011827d680cf9">login_background_portrait_3.png</a> to <a class="action-card" href="https://trello.com/c/twNAZ2F8">Background - Login</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:29:34.136Z" href="https://trello.com/c/twNAZ2F8/6-background-login#action-5bf98a7e816011827d680cfc" title="November 24, 2018 3:29 PM">an hour ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf979b62d619347a3080657/f6708c3d87ed13157dafa92a1b064d3c/login_background_portrait_3.png" target="_blank" data-idattachment="5bf98a7d816011827d680cf9"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/login_background_portrait_3.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf979b62d619347a3080657/c5b10c923c8c5166e795392677f665b0/login_background_portrait_2.png" data-idattachment="5bf98a5967fb7f399fb9c260">login_background_portrait_2.png</a> to <a class="action-card" href="https://trello.com/c/twNAZ2F8">Background - Login</a> <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:28:57.319Z" href="https://trello.com/c/twNAZ2F8/6-background-login#action-5bf98a5967fb7f399fb9c261" title="November 24, 2018 3:28 PM">an hour ago</a></span><a class="js-open-card js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf979b62d619347a3080657/c5b10c923c8c5166e795392677f665b0/login_background_portrait_2.png" target="_blank" data-idattachment="5bf98a5967fb7f399fb9c260"><img class="attachment-image-preview mod-compact-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/login_background_portrait_2.png"></a></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span></div></div></div><a class="show-more js-fill-activity-button js-open-activity" href="#">View all activity…</a></div></div></div></div></div></div></div>
+        <div id="footer">
+          <div id="contact-us" style="display:none">
+            If you're having trouble loading Trello, <a href="http://help.trello.com/article/736-troubleshooting-browser-issues-with-trello" target="support">check out our troubleshooting guide</a> or <a href="https://trello.com/contact?context=load-failure&amp;source=from%20in%20app%20footer" target="contact">contact us</a>!
+          </div>
+          <div id="footer-chrome" style="display:none"></div>
+        </div>
+      </div>
+      <div class="window-overlay">
+        <div class="window" style="display: block;">
+          <a class="focus-dummy" href="#"></a>
+          <div class="window-wrapper js-tab-parent"><a class="icon-lg icon-close dialog-close-button js-close-window dialog-close-button-light" href="#"></a><div class="card-detail-window u-clearfix"><div class="window-cover js-card-cover-box js-open-card-cover-in-viewer js-stickers-area is-covered" style="background-color: rgb(4, 76, 52); background-image: url(&quot;https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png&quot;); height: 160px; background-size: contain; background-origin: content-box; padding: 0px; box-sizing: border-box; background-position: center center;"><div class="window-cover-stickers js-display-stickers"></div></div><div class="window-archive-banner hide js-archive-banner"><span class="icon-lg icon-archive window-archive-banner-icon"></span><p class="window-archive-banner-text">This card is archived.</p></div><div class="window-archive-banner hide js-archived-list-banner"><span class="icon-lg icon-archive window-archive-banner-icon"></span><p class="window-archive-banner-text">This card is in an archived list.</p></div><div class="window-header mod-card-detail-icons-smaller"><span class="window-header-icon icon-lg icon-card"></span><div class="window-title"><h2 class="card-detail-title-assist js-title-helper" dir="auto">Background - Avaliação</h2><textarea class="mod-card-back-title js-card-detail-title-input" dir="auto" style="overflow: hidden; overflow-wrap: break-word; height: 34px;">Background - Avaliação</textarea></div><div class="window-header-inline-content quiet js-current-list"><p class="u-inline-block u-bottom">in list <a href="#" class="js-open-move-from-header">Done</a></p></div><div class="window-header-inline-content hide js-subscribed-indicator-header"><span class="icon-sm icon-subscribe"></span></div></div><div class="window-main-col mod-card-detail-icons-smaller"><div class="card-detail-data u-gutter"><div class="card-detail-item u-clearfix hide js-card-detail-members"><h3 class="card-detail-item-header mod-no-top-margin">Members</h3><div class="js-card-detail-members-list"><a class="card-detail-item-add-button dark-hover js-details-edit-members"><span class="icon-sm icon-add"></span></a></div></div><div class="card-detail-item card-detail-item-labels u-clearfix js-card-detail-labels"><h3 class="card-detail-item-header">Labels</h3><div class="u-clearfix js-card-detail-labels-list js-edit-label"><span class="card-label card-label-red mod-card-detail mod-clickable" title="">&nbsp;</span><a class="card-detail-item-add-button dark-hover js-details-edit-labels"><span class="icon-sm icon-add"></span></a></div></div><div class="card-detail-item hide js-card-detail-due-date"><h3 class="card-detail-item-header">Due Date</h3><span class="card-detail-badge card-detail-due-date-badge js-card-detail-due-date-badge"><span class="card-detail-badge-due-date-complete-box js-card-detail-due-date-badge-complete"><span class="icon-sm icon-check card-detail-badge-due-date-complete-icon"></span></span> <span class="js-date-text card-detail-due-date-text"></span></span></div><div class="card-detail-item hide js-card-detail-votes"><h3 class="card-detail-item-header">Votes</h3><a class="card-detail-badge is-clickable js-card-detail-votes-badge js-show-votes" href="#"></a></div><div class="card-detail-item hide js-card-detail-age"><h3 class="card-detail-item-header">Last Updated</h3><div class="card-detail-badge date mod-last-updated js-card-detail-age-badge"></div></div><div class="plugin-detail-badges js-plugin-badges"><div></div></div><div class="u-clearfix"></div></div><div class="window-module"><div class="window-module-title window-module-title-no-divider"><span class="icon-description icon-lg window-module-title-icon"></span><h3 class="u-inline-block">Description</h3><a class="card-detail-item-header-edit hide-on-edit js-show-with-desc js-edit-desc hide" href="#">Edit</a></div><div class="u-gutter js-hide-on-minimize-desc"><div class="editable" attr="desc"><div class="description-content js-desc-content"><div class="description-content-fade-button"><span class="description-content-fade-button-text">Show full description.</span></div><div class="current markeddown hide-on-edit js-card-desc js-show-with-desc hide" dir="auto"></div><p class="u-bottom js-hide-on-edit js-hide-with-desc"><a class="card-detail-fake-text-area hide-on-edit js-edit-desc js-hide-with-draft" href="#">Add a more detailed description…</a></p><div class="card-detail-edit edit"><a class="helper js-format-help" href="#">Formatting help</a><textarea class="field js-description-draft card-back-description" placeholder="Add a more detailed description…"></textarea></div><p class="edits-warning quiet">You have unsaved edits on this field. <a class="js-view-edits" href="#">View edits</a> - <a class="js-discard-edits" href="#">Discard</a></p><p class="edits-error error">Edit not saved.</p></div></div></div></div><div class="window-module u-clearfix js-custom-fields-section hide"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-custom-field"></span><h3 class="u-inline-block">Custom Fields</h3></div><div class="u-gutter"><div class="u-clearfix js-custom-field-detail-badges custom-field-detail-badges"><div class="custom-field-detail-badges-grid"></div></div></div></div><div class="js-plugin-card-back-sections"></div><div class="js-plugin-sections"></div><div class="window-module js-trello-attachments-section trello-attachments-section u-clearfix hide"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-board"></span><h3 class="u-inline-block">Trello Attachments</h3></div><div class="u-gutter"><div class="u-clearfix js-trello-attachments-list"></div><p class="js-show-fewer-trello-attachments hide"><a class="quiet-button js-view-some-trello-attachments" href="#">Show fewer Trello attachments.</a></p><p class="js-show-more-trello-attachments hide"><a class="quiet-button js-view-all-trello-attachments" href="#"></a></p><p><a class="quiet-button js-attach-trello-attachment" href="#">Add Trello attachment…</a></p></div></div><div class="window-module js-attachments-section u-clearfix mod-card-detail-icons-smaller"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-attachment"></span><h3 class="u-inline-block">Attachments</h3></div><div class="u-gutter"><div class="u-clearfix js-attachment-list ui-sortable"><div class="attachment-thumbnail"><a class="attachment-thumbnail-preview js-open-viewer attachment-thumbnail-preview-is-cover" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" target="_blank" title="avaliacao_background_model.png" style="background-image: url('https://trello-attachments.s3.amazonaws.com/5bf97a1803b4bc849436d2b9/300x482/1fb256e756e7736a77626bf1219baac7/avaliacao_background_model.png');background-color: #044c34;" rel="noreferrer nofollow"></a><p class="attachment-thumbnail-details js-open-viewer"><span class="attachment-thumbnail-name js-attachment-name can-edit-attachment-title">avaliacao_background_model.png</span><a class="attachment-thumbnail-details-title-action dark-hover js-attachment-action js-direct-link" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" target="_blank" rel="noreferrer nofollow"><span class="icon-sm icon-external-link"></span></a><textarea class="attachment-thumbnail-details-title js-attachment-thumbnail-details hide" maxlength="256" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 66px;">avaliacao_background_model.png</textarea><span class="u-block quiet attachment-thumbnail-details-title-options"><span>Added <span class="date" dt="2018-11-24T18:01:33.294Z" title="November 24, 2018 4:01 PM">19 minutes ago</span></span><span><a class="attachment-thumbnail-details-title-options-item js-reply" href="#"><span class="attachment-thumbnail-details-options-item-text">Comment</span></a></span><span><a class="attachment-thumbnail-details-title-options-item dark-hover js-confirm-delete" href="#"><span class="attachment-thumbnail-details-options-item-text">Delete</span></a></span></span><span class="quiet attachment-thumbnail-details-options"><a class="attachment-thumbnail-details-options-item dark-hover hide js-make-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Make Cover</span></a><a class="attachment-thumbnail-details-options-item dark-hover js-remove-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Remove Cover</span></a></span></p></div><div class="attachment-thumbnail"><a class="attachment-thumbnail-preview js-open-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" target="_blank" title="avaliacao_background_2.png" style="background-image: url('https://trello-attachments.s3.amazonaws.com/5bf97a1803b4bc849436d2b9/300x482/2d817e2276fabd2d053e83e246a30244/avaliacao_background_2.png');background-color: #044c34;" rel="noreferrer nofollow"></a><p class="attachment-thumbnail-details js-open-viewer"><span class="attachment-thumbnail-name js-attachment-name can-edit-attachment-title">avaliacao_background_2.png</span><a class="attachment-thumbnail-details-title-action dark-hover js-attachment-action js-direct-link" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" target="_blank" rel="noreferrer nofollow"><span class="icon-sm icon-external-link"></span></a><textarea class="attachment-thumbnail-details-title js-attachment-thumbnail-details hide" maxlength="256" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 66px;">avaliacao_background_2.png</textarea><span class="u-block quiet attachment-thumbnail-details-title-options"><span>Added <span class="date" dt="2018-11-24T17:58:07.031Z" title="November 24, 2018 3:58 PM">22 minutes ago</span></span><span><a class="attachment-thumbnail-details-title-options-item js-reply" href="#"><span class="attachment-thumbnail-details-options-item-text">Comment</span></a></span><span><a class="attachment-thumbnail-details-title-options-item dark-hover js-confirm-delete" href="#"><span class="attachment-thumbnail-details-options-item-text">Delete</span></a></span></span><span class="quiet attachment-thumbnail-details-options"><a class="attachment-thumbnail-details-options-item dark-hover js-make-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Make Cover</span></a><a class="attachment-thumbnail-details-options-item dark-hover hide js-remove-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Remove Cover</span></a></span></p></div><div class="attachment-thumbnail"><a class="attachment-thumbnail-preview js-open-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" target="_blank" title="avaliacao_background.png" style="background-image: url('https://trello-attachments.s3.amazonaws.com/5bf97a1803b4bc849436d2b9/300x482/bd82a804d663111029e6026a583b6987/avaliacao_background.png');background-color: #044c34;" rel="noreferrer nofollow"></a><p class="attachment-thumbnail-details js-open-viewer"><span class="attachment-thumbnail-name js-attachment-name can-edit-attachment-title">avaliacao_background.png</span><a class="attachment-thumbnail-details-title-action dark-hover js-attachment-action js-direct-link" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" target="_blank" rel="noreferrer nofollow"><span class="icon-sm icon-external-link"></span></a><textarea class="attachment-thumbnail-details-title js-attachment-thumbnail-details hide" maxlength="256" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 66px;">avaliacao_background.png</textarea><span class="u-block quiet attachment-thumbnail-details-title-options"><span>Added <span class="date" dt="2018-11-24T17:56:32.792Z" title="November 24, 2018 3:56 PM">24 minutes ago</span></span><span><a class="attachment-thumbnail-details-title-options-item js-reply" href="#"><span class="attachment-thumbnail-details-options-item-text">Comment</span></a></span><span><a class="attachment-thumbnail-details-title-options-item dark-hover js-confirm-delete" href="#"><span class="attachment-thumbnail-details-options-item-text">Delete</span></a></span></span><span class="quiet attachment-thumbnail-details-options"><a class="attachment-thumbnail-details-options-item dark-hover js-make-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Make Cover</span></a><a class="attachment-thumbnail-details-options-item dark-hover hide js-remove-cover" href="#"><span class="icon-sm icon-card-cover"></span> <span class="attachment-thumbnail-details-options-item-text">Remove Cover</span></a></span></p></div></div><p class="js-show-fewer-attachments hide"><a class="quiet-button js-view-some-attachments" href="#">Show fewer attachments.</a></p><p class="js-show-more-attachments hide"><a class="quiet-button js-view-all-attachments" href="#">View all attachments (-1 hidden)</a></p><p class="js-show-with-attachments"><a class="quiet-button js-attach" href="#">Add an attachment…</a></p></div></div><div class="checklist-list window-module js-checklist-list js-no-higher-edits ui-sortable" style=""></div><div class="window-module add-comment-section"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-comment"></span><h3>Add Comment</h3><span class="editing-members js-editing-members hide"></span></div><div class="new-comment js-new-comment mod-card-back"><div class="member member-no-menu"><img class="member-avatar" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/30_002.png" srcset="https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/30.png 1x, https://trello-avatars.s3.amazonaws.com/48f739f2c5b2a7d5003fd75980f1999f/50.png 2x" alt="Carlos E. Domingues (carlosceds)" title="Carlos E. Domingues (carlosceds)" width="30" height="30"><span class="member-gold-badge" title="This member has Trello Gold."></span></div><form><div class="comment-frame"><div class="comment-box"><textarea class="comment-box-input js-new-comment-input" placeholder="Write a comment…" tabindex="1" dir="auto" style="overflow: hidden; overflow-wrap: break-word; height: 79px;"></textarea><div class="comment-box-options"><a class="comment-box-options-item js-comment-add-attachment" href="#" title="Add an attachment…"><span class="icon-sm icon-attachment"></span></a><a class="comment-box-options-item js-comment-mention-member" href="#" title="Mention a member…"><span class="icon-sm icon-mention"></span></a><a class="comment-box-options-item js-comment-add-emoji" href="#" title="Add emoji…"><span class="icon-sm icon-emoji"></span></a><a class="comment-box-options-item js-comment-add-card" href="#" title="Add card…"><span class="icon-sm icon-card"></span></a></div></div></div><div class="comment-controls u-clearfix"><input class="primary confirm mod-no-top-bottom-margin js-add-comment" disabled="disabled" tabindex="3" type="submit" value="Save"><span class="comment-subscribe is-clickable is-subscribed js-comment-subscribe"><span class="comment-subscribe-box"><span class="icon-sm icon-check comment-subscribe-icon"></span></span><div class="comment-subscribe-description">Watch this card for updates</div></span></div></form><div class="comment-too-long-warning"><p>Your comment is too long! You can add it as a text attachment or truncate it.</p><input class="primary js-attach-comment" type="submit" value="Add as an Attachment" tabindex="4"><input class="js-truncate-comment" type="submit" value="Truncate" tabindex="5"></div></div></div><div class="window-module mod-card-detail-icons-smaller"><div class="window-module-title window-module-title-no-divider"><span class="window-module-title-icon icon-lg icon-activity"></span><h3>Activity</h3><div class="window-module-title-options"><a class="quiet hide js-show-details" href="#">Show Details</a><a class="quiet js-hide-details" href="#">Hide Details</a></div></div><div class="js-list-actions mod-card-back"><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" data-idattachment="5bf991fdbcebfa4c263f5425">avaliacao_background_model.png</a> to this card <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T18:01:33.449Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf991fdbcebfa4c263f5427" title="November 24, 2018 4:01 PM">19 minutes ago</a></span><a class="js-open-attachment-viewer js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" target="_blank" data-idattachment="5bf991fdbcebfa4c263f5425"><img class="attachment-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_model.png"></a><div class="hide previews js-previews"></div></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><a class="js-reply-to-action" href="#">Reply</a><span class="edits-warning quiet"> - You have unsaved edits on this field.</span></span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" data-idattachment="5bf9912f54d7f18efde4064c">avaliacao_background_2.png</a> to this card <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:58:07.630Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf9912f54d7f18efde40652" title="November 24, 2018 3:58 PM">22 minutes ago</a></span><a class="js-open-attachment-viewer js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/45fd7b3a610341f33fe2787dc940fc6e/avaliacao_background_2.png" target="_blank" data-idattachment="5bf9912f54d7f18efde4064c"><img class="attachment-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_2.png"></a><div class="hide previews js-previews"></div></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><a class="js-reply-to-action" href="#">Reply</a><span class="edits-warning quiet"> - You have unsaved edits on this field.</span></span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved this card from Doing to Done</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:38.717Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990d69675f3340cda62ce" title="November 24, 2018 3:56 PM">23 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><span class="edits-warning quiet">You have unsaved edits on this field.</span></span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> attached <a class="js-open-attachment-viewer" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" data-idattachment="5bf990d02894e16c195cc5be">avaliacao_background.png</a> to this card <span class="inline-spacer"> </span><span class="phenom-date quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:32.909Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990d02894e16c195cc5c0" title="November 24, 2018 3:56 PM">24 minutes ago</a></span><a class="js-open-attachment-viewer js-friendly-links" href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/faa69b0264dca15d4dd1ee044c3fbaba/avaliacao_background.png" target="_blank" data-idattachment="5bf990d02894e16c195cc5be"><img class="attachment-image-preview" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background.png"></a><div class="hide previews js-previews"></div></div><div class="phenom-meta quiet"><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><a class="js-reply-to-action" href="#">Reply</a><span class="edits-warning quiet"> - You have unsaved edits on this field.</span></span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> moved this card from To Do to Doing</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T17:56:24.150Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf990c8a60cd545a31d2d3a" title="November 24, 2018 3:56 PM">24 minutes ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><span class="edits-warning quiet">You have unsaved edits on this field.</span></span></div></div><div class="phenom mod-attachment-type"><div class="phenom-creator"><div class="member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="member-initials" title="Aldir Ott Netto (aldirottnetto)">AN</span><span class="member-gold-badge" title="This member has Trello Gold."></span></div></div><div class="phenom-desc"><span class="inline-member js-show-mem-menu" idmember="5bf97941df87094cc86db2f5"><span class="u-font-weight-bold">Aldir Ott Netto</span></span> added this card to To Do</div><div class="phenom-meta quiet"><a class="date js-hide-on-sending js-highlight-link" dt="2018-11-24T16:19:36.247Z" href="https://trello.com/c/Rhwz0P8k/8-background-avalia%C3%A7%C3%A3o#action-5bf97a1803b4bc849436d2ba" title="November 24, 2018 2:19 PM">2 hours ago</a><span class="js-spinner hide"><span class="spinner spinner--inline mod-left small"></span> Sending…&nbsp;</span><span class="js-hide-on-sending middle"><span class="edits-warning quiet">You have unsaved edits on this field.</span></span></div></div></div><div class="spinner loading js-loading-card-actions" style="display: none;"></div><p class="u-bottom"><a class="show-more hide js-show-all-actions" href="#">Show all actions…</a></p></div></div><div class="window-sidebar" style="position: relative;"><div class="window-module u-clearfix"><h3 class="mod-no-top-margin">Add To Card</h3><div class="u-clearfix"><a class="button-link js-change-card-members" href="#" title="Members"><span class="icon-sm icon-member"></span><span>Members</span></a><a class="button-link js-edit-labels" href="#" title="Labels"><span class="icon-sm icon-label"></span><span>Labels</span></a><a class="button-link js-add-checklist-menu" href="#" title="Checklist"><span class="icon-sm icon-checklist"></span><span>Checklist</span></a><a class="button-link js-add-due-date" href="#" title="Due Date"><span class="icon-sm icon-clock"></span><span>Due Date</span></a><a class="button-link js-attach" href="#" title="Attachment"><span class="icon-sm icon-attachment"></span><span>Attachment</span></a></div></div><div class="js-plugin-buttons"><div class="window-module u-clearfix hide"><h3>Power-Ups</h3><div class="u-clearfix js-button-list"></div></div></div><div class="window-module other-actions u-clearfix"><h3 class="mod-no-top-margin">Actions</h3><div class="u-clearfix"><a class="button-link js-move-card" href="#" title="Move"><span class="icon-sm icon-move"></span><span>Move</span></a><a class="button-link js-copy-card" href="#" title="Copy"><span class="icon-sm icon-card"></span><span>Copy</span></a><span class="js-subscribe-sidebar-button hide"></span><a class="button-link toggle-button js-subscribe" title="Watch the card to get notifications when something changes." href="#"><span class="icon-sm icon-subscribe"></span><span>Watch</span><span class="on"><span class="icon-sm icon-check light"></span></span></a><span class="js-vote-sidebar-button hide"></span><hr><a class="button-link js-archive-card" href="#" title="Archive"><span class="icon-sm icon-archive"></span><span>Archive</span></a><a class="button-link js-unarchive-card hide" href="#" title="Send to board"><span class="icon-sm icon-refresh"></span><span>Send to board</span></a><a class="button-link js-delete-card hide negate" href="#" title="Delete"><span class="icon-sm icon-remove"></span><span>Delete</span></a></div></div><div class="window-module u-clearfix"><p class="quiet u-bottom"><a class="quiet-button js-more-menu" href="#">Share and more…</a></p></div></div><p class="dropzone">Drop files to upload.</p><p class="dropzone-limited attachments-per-card">Too many attachments on this card.</p><p class="dropzone-limited attachments-per-board">Too many attachments on this board.</p><p class="dropzone-restricted attachments-restricted">This attachment type is not allowed by your enterprise.</p></div></div>
+        </div>
+      </div>
+      <div class="pop-over">
+      </div>
+      <div class="tooltip-container">
+      </div>
+      <div id="clipboard-container" style="display: none;"></div>
+    <div class="attachment-viewer"><div class="attachment-viewer-header js-close-viewer"><span class="icon-lg icon-close attachment-viewer-header-close-icon"></span></div><div class="attachment-viewer-underlay js-close-viewer"></div><div class="attachment-viewer-frames js-frames"><div class="attachment-viewer-frame js-close-viewer attachment-viewer-frame-center attachment-viewer-frame-loaded" data-idattachment="5bf991fdbcebfa4c263f5425"><div class="attachment-viewer-frame-preview-wrapper"><div class="attachment-viewer-frame-preview attachment-viewer-frame-preview-image-wrapper"><img class="attachment-viewer-frame-preview-image js-stop" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_model.png" alt="avaliacao_background_model.png"></div></div></div><div class="attachment-viewer-frame js-close-viewer attachment-viewer-frame-right attachment-viewer-frame-loaded" data-idattachment="5bf9912f54d7f18efde4064c"><div class="attachment-viewer-frame-preview-wrapper"><div class="attachment-viewer-frame-preview attachment-viewer-frame-preview-image-wrapper"><img class="attachment-viewer-frame-preview-image js-stop" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/avaliacao_background_2.png" alt="avaliacao_background_2.png"></div></div></div></div><div class="attachment-viewer-overlay"><div class="attachment-viewer-frame-details js-display-frame-details"><div class="attachment-viewer-frame-details"><h2 class="attachment-viewer-frame-details-title">avaliacao_background_model.png</h2><p>Added <span class="date" dt="2018-11-24T18:01:33.294Z" title="November 24, 2018 4:01 PM">19 minutes ago</span> - 369.66 KB</p><p><span class="js-meta"><a href="https://trello-attachments.s3.amazonaws.com/5bf9361e3ea0fb7a79843f80/5bf97a1803b4bc849436d2b9/adbb056a413693576898cd022cede6b5/avaliacao_background_model.png" target="_blank"><span class="icon-sm icon-external-link light attachment-viewer-option-icon"></span>Open in New Tab</a><span class="js-cover-options"><span class="js-make-cover-box hide"><a class="js-make-cover" href="#"><span class="icon-sm icon-card-cover light attachment-viewer-option-icon"></span>Make Cover</a></span><span class="js-remove-cover-box"><a class="js-remove-cover" href="#"><span class="icon-sm icon-card-cover light attachment-viewer-option-icon"></span>Remove Cover</a></span></span><a class="js-open-delete-confirm" href="#"><span class="icon-sm icon-close light attachment-viewer-option-icon"></span>Delete</a></span><span class="js-confirm-delete hide">Are you sure you want to delete? There is no undo.<a class="attachment-viewer-delete-link js-delete" href="#">Delete forever.</a><a class="attachment-viewer-delete-link js-close-delete-confirm" href="#">Never mind.</a></span></p></div></div></div><a class="attachment-viewer-next-frame-btn js-show-next-frame"><span class="icon-lg icon-forward light attachment-viewer-next-frame-btn-icon"></span></a><a class="attachment-viewer-prev-frame-btn js-show-prev-frame hide"><span class="icon-lg icon-back light attachment-viewer-prev-frame-btn-icon"></span></a></div></div>
+  </div>
+  <script>TrelloPerf.stopMeasurement(TrelloPerf.Keys.HTML);</script>
+
+
+<textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; height: 0px !important; min-height: 0px !important; overflow: hidden; transition: none 0s ease 0s; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; white-space: pre-wrap; line-height: 20px; width: 486px;" class="autosizejs" id="autosizejs">Write a comment…
+</textarea><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" style="position: absolute; width: 1px; height: 1px; left: -9999px; top: -9999px; right: -9999px; bottom: -9999px; display: none;" aria-hidden="true" frame-border="0" src="Background%20-%20Avaliac%CC%A7a%CC%83o%20on%20Hackaton%20Unimed%20|%20Trello_files/iframe.html"></iframe></body></html>

@@ -1,0 +1,196 @@
+/* Empty. Add your own CSS if you like */
+
+ion-content {
+	font-family: TrebuchetMS;	
+}
+.login-background {
+  	background: url("../img/login_background.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.avaliacao-background {
+  	background: url("../img/avaliacao_background.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.relatorio-background {
+  	background: url("../img/relatorio_background_1.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.item-nobackground {
+	background: none !important;
+}
+
+.input-label {
+	font-size: 2vh !important;
+}
+input {
+	font-size: 2vh !important;
+}
+
+.bar.bar-stable {
+	background-color: #019A60 !important;	
+}
+.bar-stable .title {
+	color: #FFFFFF !important;
+}
+
+.bar-stable .button.button-icon {
+	color: #FFFFFF !important;	
+}
+
+.rounded {
+	width: 100%;
+	height: 6vh;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 30px;
+	margin-bottom: 10px;  
+	margin-top: 10px;
+}
+
+#container {
+	padding: 20px;
+    margin-left:auto; 
+    margin-right: auto; 
+}
+
+.margin-top-30vh{
+	margin-top: 35vh
+}
+
+.margin-top-18vh{
+	margin-top: 18vh
+}
+
+.margin-top-10vh{
+	margin-top: 10vh !important;
+}
+
+.margin-top-5vh{
+	margin-top: 5vh !important;
+}
+
+.round-button {
+	color: #FFFFFF !important;
+	border-radius: 30px;
+	background-color: #00492D !important;
+	font-weight: bold;
+	height: 6vh;
+	font-size: 2vh;
+}
+
+.padding-list {
+	padding-left: 10vw !important;
+    padding-right: 10vw !important;
+    padding-top: 8vh;
+}
+
+.border-none {
+	border: none !important;
+}
+
+.no-margin-left {
+	padding-left: 0;
+}
+.no-margin-right{
+	padding-right: 0;
+}
+.color-white {	
+	color: white;
+}
+
+.font-17 {
+	font-size: 2vh;
+}
+
+.font-gif {
+	font-size: 3vh;
+	line-height: 1.2;
+}
+
+.padding-left-10px {
+	padding-left: 10px;
+} 
+
+.btn-ruler {
+	padding-left: 0px !important;
+	background: none !important;
+	border: none !important;
+}
+
+.no-border-radius {
+	border-radius: 0px;
+	min-width: 40px;
+}
+
+.margin-top-0 {
+	margin-top: 0 !important
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0 !important
+}
+
+.report{
+	background-color: #52c153;
+	width: 30vh;
+	height: 30vh;
+}
+.pos-fix {
+	position: absolute;
+	bottom: 30vh;
+	right: 25vw;
+}
+.report-value {
+	color: white;
+    font-weight: bold;
+    font-size: 22vh;    
+    position: absolute;    
+    bottom: 14vh;
+    right: 3vw;
+}
+
+.active {
+    background-color: #AAA !important;
+    color: white;
+}
+
+.agradecimento-gif {  	
+  	left: 15vw;
+  	top: 20vh;  	
+  	position: absolute;
+  	text-align: center;
+  	padding-right: 15vw;
+}
+
+.font-25 {
+	font-size: 25px;
+}
+
+.error {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+.text-label {
+	margin-top: 2vh;
+	line-height: 1.2;
+}
+
+.chart {
+ 	width: 120vw;
+ 	height: 90vh;
+}

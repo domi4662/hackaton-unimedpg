@@ -1,0 +1,41 @@
+<ion-view view-title="Pesquisa Avaliação">   
+  <ion-content class="avaliacao-background" overflow-scroll="true">  
+   	<div id="container" class="list padding-list margin-top-18vh" ng-show="!userData.submitted">
+   		<div class="item-input btn-ruler">
+   			<span class="color-white font-17 padding-left-10px"> Seu CPF é opcional </span>
+   		</div>
+	  	<label class="item item-input rounded text-label">	  		
+	      	<span class="input-label">CPF</span>
+	      	<input type="number" ng-model="userData.num_cpf">
+	    </label>	  
+	    <div class="item-input btn-ruler text-label">	
+	    	<span class="color-white font-17 padding-left-10px"> Em uma escala de 0 a 10, qual é a probabilidade que você recomendaria a Unimed para um amigo? </span>
+	    </div>
+	  	<div class="item item-input btn-ruler">	
+      		<button ng-repeat="btn in ruler_1" class="margin-bottom-0 button button-block button-positive no-border-radius" style="background-color:{{btn.color}}" ng-click="(btn.label != userData.nota) ? userData.nota = btn.label : userData.nota = 0" ng-class="{'active': userData.nota == btn.label && userData.nota != 0}">
+  				{{btn.label}}
+  			</button>
+  		</div>
+  		<div class="item item-input btn-ruler">
+  			<button ng-repeat="btn in ruler_2 track by $index" class="margin-top-0 button button-block button-positive no-border-radius" style="background-color:{{btn.color}}" ng-click="(btn.label != userData.nota) ? userData.nota = btn.label : userData.nota = 0" ng-class="{'active': userData.nota == btn.label && userData.nota != 0}" >
+  				{{btn.label}}
+  			</button>
+	    </div>
+	    <div class="item-input btn-ruler text-label">
+	    	<span class="color-white font-17 padding-left-10px">Deseja adicionar algum comentário?</span>
+	    </div>
+	    <label class="item item-input rounded">	  		
+	      	<span class="input-label">Observações</span>
+	      	<input type="text" ng-model="userData.obs">
+	    </label>
+	    <label>
+	  		<button type="submit" class="button button-block button-positive round-button margin-top-5vh" ng-click="userData.submitted = true; enviarAvaliacao();" ng-disabled="!userData.nota">Responder</button>
+		</label>		
+	</div>	
+	<div class="align-center agradecimento-gif font-gif" style="border-color: transparent;" ng-show="userData.submitted">
+    	<img src="img/Animation.gif"></img>
+    	</br></br>
+    	<span class="color-white">Obrigado por participar da nossa pesquisa!</span>
+  	</div>
+  </ion-content>
+</ion-view>

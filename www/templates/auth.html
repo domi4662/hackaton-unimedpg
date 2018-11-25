@@ -1,0 +1,22 @@
+<ion-view view-title="Login" hide-nav-bar="true">  
+  <ion-content class="login-background" overflow-scroll="true">
+    <form ng-submit="doLogin()">
+      <div class="list padding-list">
+        <label class="item item-input rounded margin-top-30vh">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input rounded">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item item-nobackground border-none no-margin-left no-margin-right margin-top-10vh">
+          <button class="button button-block button-positive round-button" type="submit">
+            Login
+          </button>
+        </label>
+        <div class="error" ng-show="loginData.error">Username ou password incorretos!</div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

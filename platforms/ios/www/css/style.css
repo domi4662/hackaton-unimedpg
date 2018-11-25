@@ -1,0 +1,162 @@
+/* Empty. Add your own CSS if you like */
+
+ion-content {
+	font-family: TrebuchetMS;	
+}
+.login-background {
+  	background: url("../img/login_background.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.avaliacao-background {
+  	background: url("../img/avaliacao_background.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.relatorio-background {
+  	background: url("../img/relatorio_background_1.png") no-repeat fixed center; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;	
+}
+
+.item-nobackground {
+	background: none !important;
+}
+
+.bar.bar-stable {
+	background-color: #019A60 !important;	
+}
+.bar-stable .title {
+	color: #FFFFFF !important;
+}
+
+.bar-stable .button.button-icon {
+	color: #FFFFFF !important;	
+}
+
+.rounded {
+	width: 100%;
+	height: 40px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 20px;
+	margin-bottom: 10px;  
+	margin-top: 10px;
+}
+
+#container {
+	padding: 20px;
+    margin-left:auto; 
+    margin-right: auto; 
+}
+
+.pos-fix {
+	margin-top: 100% !important;
+}
+
+.margin-top-30vh{
+	margin-top: 35vh
+}
+
+.margin-top-18vh{
+	margin-top: 13vh
+}
+
+.margin-top-10vh{
+	margin-top: 10vh !important;
+}
+
+.round-button {
+	color: #FFFFFF !important;
+	border-radius: 20px;
+	background-color: #00492D !important;
+	font-weight: bold;
+}
+
+.padding-list {
+	padding-left: 10vw !important;
+    padding-right: 10vw !important;
+    padding-top: 8vh;
+}
+
+.border-none {
+	border: none !important;
+}
+
+.no-margin-left {
+	padding-left: 0;
+}
+.no-margin-right{
+	padding-right: 0;
+}
+.color-white {	
+	color: white;
+}
+
+.font-17 {
+	font-size: 14px;
+}
+
+.padding-left-10px {
+	padding-left: 10px;
+} 
+
+.btn-ruler {
+	padding-left: 0px !important;
+	background: none !important;
+	border: none !important;
+}
+
+.no-border-radius {
+	border-radius: 0px;
+	min-width: 40px;
+}
+
+.margin-top-0 {
+	margin-top: 0 !important
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0 !important
+}
+
+.report{
+	background-color: #52c153;
+	width: 30vh;
+	height: 30vh;
+}
+.pos-fix {
+	position: absolute;
+	bottom: 30vh;
+	right: 25vw;
+}
+.report-value {
+	color: white;
+    font-weight: bold;
+    font-size: 11em;    
+    position: absolute;    
+    bottom: 14vh;
+    right: 3vw;
+}
+
+.active {
+    background-color: #AAA !important;
+    color: white;
+}
+
+.agradecimento-gif {  	
+  	left: 15vw;
+  	top: 20vh;  	
+  	position: absolute;
+  	text-align: center;
+  	padding-right: 15vw;
+}
+
+.font-25 {
+	font-size: 25px;
+}
