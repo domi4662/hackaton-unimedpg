@@ -65,7 +65,8 @@ angular.module('starter.controllers', [])
     {label: 10, color: "#52c153"},
   ];  
 
-  $scope.enviarAvaliacao = function(){    
+  $scope.enviarAvaliacao = function(){
+    $scope.userData.mes = 11; 
     $scope.users.push($scope.userData);
     
     $timeout(function() {
@@ -100,17 +101,16 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AnalyticsCtrl', function($scope) {
-  console.log("Analytics Controlller");
-
-  console.log($scope.users);
+  console.log("Analytics Controlller");  
+  var nps = false;
 
   $scope.config = {
-    title: 'NPS Geral',
+    title: 'Avaliaçoes por mês',
     tooltips: true,
     labels: false,
     mouseover: function() {},
     mouseout: function() {},
-    click: function() {},
+    click: function() { nps = !nps; $scope.data.series.length ? $scope.setDataChart(nps, []) : $scope.setDataChart(nps, ['0-6', '7-8', '9-10']); },
     legend: {
       display: true,
       //could be 'left, right'
@@ -118,7 +118,22 @@ angular.module('starter.controllers', [])
     }
   };
 
-  function getNotasByMonth(mes){
+  function calcularNPS(notas){
+    var num_aval = notas.length;
+    var promotores = notas.filter(function(nota) { return nota >= 9; } );
+    var detratores = notas.filter(function(nota) { return nota <= 6; } );
+
+    var p_promotor = (promotores.length/num_aval)*100;
+    var p_detrator = (detratores.length/num_aval)*100;
+
+    var nps = parseInt(p_promotor - p_detrator);
+    $scope.nota_nps = nps;
+
+    return nps;
+  } 
+
+  function getNotasByMonth(mes, nps){
+    var dados = [];
     var notas = $scope.users.filter(
       function(data) { 
         return data.mes == mes; 
@@ -127,55 +142,77 @@ angular.module('starter.controllers', [])
         return data.nota;
     });
 
-    return notas;
-    console.log(notas);
+    if(!nps){
+      $scope.config.title = 'Avaliaçoes por mês';
+      dados[0] = notas.filter(function(nota) { return nota >= 9; } ).length;
+      dados[1] = notas.filter(function(nota) { return nota == 7 || nota == 8; } ).length;
+      dados[2] = notas.filter(function(nota) { return nota <= 6; } ).length;
+    } else {
+      $scope.config.title = 'NPS por mês';
+      dados[0] = calcularNPS(notas);
+    }   
+    
+    return dados;    
   }  
 
-  $scope.data = {    
-    data: [{
-      x: "Jan",
-      y: getNotasByMonth(1)      
-    }, {
-      x: "Fev",
-      y: getNotasByMonth(2)
-    }, {
-      x: "Mar",
-      y: getNotasByMonth(3)
-    }, {
-      x: "Abr",
-      y: getNotasByMonth(4)
-    },
-    {
-      x: "Mai",
-      y: getNotasByMonth(5)
-    },
-    {
-      x: "Jun",
-      y: getNotasByMonth(6)
-    },
-    {
-      x: "Jul",
-      y: getNotasByMonth(7)
-    },
-    {
-      x: "Ago",
-      y: getNotasByMonth(8)
-    },
-    {
-      x: "Set",
-      y: getNotasByMonth(9)
-    },
-    {
-      x: "Out",
-      y: getNotasByMonth(10)
-    },
-    {
-      x: "Nov",
-      y: getNotasByMonth(11)
-    },
-    {
-      x: "Dez",
-      y: getNotasByMonth(12)
-    }]
-  };  
+  $scope.setDataChart = function (nps, series) {
+
+    $scope.data = {
+     colours: [{ // default
+        "fillColor": "rgba(224, 108, 112, 1)",
+        "strokeColor": "rgba(207,100,103,1)",
+        "pointColor": "rgba(220,220,220,1)",
+        "pointStrokeColor": "#fff",
+        "pointHighlightFill": "#fff",
+        "pointHighlightStroke": "rgba(151,187,205,0.8)"
+      }],
+      series: series,   
+      data: [{
+        x: "Jan",
+        y: getNotasByMonth(1,nps)      
+      }, {
+        x: "Fev",
+        y: getNotasByMonth(2,nps)
+      }, {
+        x: "Mar",
+        y: getNotasByMonth(3,nps)
+      }, {
+        x: "Abr",
+        y: getNotasByMonth(4,nps)
+      },
+      {
+        x: "Mai",
+        y: getNotasByMonth(5,nps)
+      },
+      {
+        x: "Jun",
+        y: getNotasByMonth(6,nps)
+      },
+      {
+        x: "Jul",
+        y: getNotasByMonth(7,nps)
+      },
+      {
+        x: "Ago",
+        y: getNotasByMonth(8,nps)
+      },
+      {
+        x: "Set",
+        y: getNotasByMonth(9,nps)
+      },
+      {
+        x: "Out",
+        y: getNotasByMonth(10,nps)
+      },
+      {
+        x: "Nov",
+        y: getNotasByMonth(11,nps)
+      },
+      {
+        x: "Dez",
+        y: getNotasByMonth(12,nps)
+      }]
+    };  
+  }
+
 });
